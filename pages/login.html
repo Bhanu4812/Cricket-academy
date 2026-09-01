@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Secure player portal access for Vertex Cricket Academy students.">
+  <title>Player Portal Sign In | Vertex Cricket Academy</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body class="auth-page">
+  <a class="skip-link" href="#auth-login">Skip to sign in</a>
+
+  <header class="auth-header">
+    <a class="auth-back" href="Homepage1.html">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m5-5-5 5 5 5"/></svg>
+      <span>Back to Home</span>
+    </a>
+    <div class="auth-utilities" aria-label="Display preferences">
+      <button class="auth-utility theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.4A8.5 8.5 0 0 1 8.6 3.8 8.6 8.6 0 1 0 20.2 15.4Z"/></svg>
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <button class="auth-utility direction-toggle" type="button" aria-label="Switch to RTL" title="Switch to RTL"><span data-direction-short>RTL</span></button>
+    </div>
+  </header>
+
+  <main class="auth-main">
+    <section class="auth-experience" aria-labelledby="auth-story-title">
+      <div class="auth-geometry" aria-hidden="true"><span></span><i></i><b></b><svg viewBox="0 0 220 220"><circle cx="110" cy="110" r="86"/><path d="M77 70c26 20 44 49 55 82M88 59c27 21 48 50 61 83"/></svg></div>
+      <div class="auth-experience-inner">
+        <div class="auth-story-meta"><span>Welcome Back</span><span>Player Portal · AC/01</span></div>
+        <a class="auth-brand" href="Homepage1.html" aria-label="Vertex Cricket Academy home">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 3.5 41 10v12.2c0 10.4-6.8 18.5-17 22.3C13.8 40.7 7 32.6 7 22.2V10L24 3.5Z"/><path class="brand-mark-detail" d="M17.2 31.8V17.6m4.5 14.2V17.6m4.6 14.2V17.6M15 17.6h13.5M14.5 31.8H29"/><circle class="brand-mark-ball" cx="32.6" cy="14.2" r="5.2"/><path class="brand-mark-seam" d="M29.5 10.7c1.8 1.5 3.9 3.8 6.1 7"/></svg></span>
+          <span class="brand-copy"><span class="brand-name">Vertex</span><span class="brand-descriptor">Cricket Academy</span></span>
+        </a>
+        <p class="auth-brand-line">Structured coaching. Clear feedback. Better performance.</p>
+        <div class="auth-story-copy">
+          <h1 id="auth-story-title">Welcome back to your cricket journey.</h1>
+          <p>Access your schedules, attendance, coach feedback and upcoming tournament information from one secure player portal.</p>
+        </div>
+        <div class="auth-benefits" aria-label="Player portal features">
+          <article><span>01</span><h2>Training Schedule</h2><p>See your weekly coaching sessions and batch timings.</p></article>
+          <article><span>02</span><h2>Attendance</h2><p>Review month-wise attendance and training consistency.</p></article>
+          <article><span>03</span><h2>Coach Feedback</h2><p>Read individual coaching notes and development priorities.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="auth-access" id="auth-login" aria-labelledby="auth-login-title" tabindex="-1">
+      <div class="auth-access-panel">
+        <span class="auth-access-eyebrow"><i aria-hidden="true"></i>Private Player Access</span>
+        <h2 id="auth-login-title">Sign in</h2>
+        <p class="auth-access-intro">Welcome back. Continue to your training schedule and player account.</p>
+
+        <form class="auth-form" novalidate>
+          <div class="auth-form-alert" role="alert" tabindex="-1" hidden><strong>Check your sign-in details.</strong><p>Please correct the fields marked below.</p></div>
+          <div class="auth-field">
+            <label for="auth-email">Email Address</label>
+            <div class="auth-control"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><input id="auth-email" name="email" type="email" autocomplete="username" inputmode="email" placeholder="you@example.com" required aria-describedby="auth-email-error"></div>
+            <p class="auth-field-error" id="auth-email-error"></p>
+          </div>
+          <div class="auth-field">
+            <label for="auth-password">Password</label>
+            <div class="auth-control auth-password-control"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><input id="auth-password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required aria-describedby="auth-password-error"><button class="auth-password-toggle" type="button" aria-label="Show password" aria-pressed="false"><svg class="auth-eye-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg><svg class="auth-eye-closed" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 3 18 18M10.6 6.2A11.6 11.6 0 0 1 12 6c6.5 0 10 6 10 6a17 17 0 0 1-2.1 2.8M6.3 6.3C3.5 8.1 2 12 2 12s3.5 6 10 6c1.6 0 3-.4 4.2-1"/></svg></button></div>
+            <p class="auth-field-error" id="auth-password-error"></p>
+          </div>
+          <div class="auth-form-options">
+            <label class="auth-remember"><input type="checkbox" name="remember"><span aria-hidden="true"><svg viewBox="0 0 16 16"><path d="m3 8 3 3 7-7"/></svg></span>Remember me</label>
+            <a href="contact.html">Forgot Password?</a>
+          </div>
+          <button class="auth-submit" type="submit"><span>Sign In</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></button>
+          <div class="auth-demo-message" role="status" tabindex="-1" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-9h.01"/></svg><p>Your details passed front-end validation. This demo is not connected to an authentication service.</p></div>
+        </form>
+
+        <p class="auth-register">New here? <a href="register.html">Create an account <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></a></p>
+        <p class="auth-security"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Your account details stay private and secure.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
