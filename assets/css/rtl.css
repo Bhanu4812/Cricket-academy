@@ -1,279 +1,748 @@
-html[dir="rtl"] .nav-dropdown { inset-inline-start: auto; inset-inline-end: 0; }
+html[dir="rtl"] .nav-dropdown {
+    inset-inline-start: auto;
+    inset-inline-end: 0;
+}
 html[dir="rtl"] .nav-dropdown a:hover,
-html[dir="rtl"] .nav-dropdown a:focus-visible { transform: translateX(-2px); }
-html[dir="rtl"] .footer-links a:hover { transform: translateX(-5px); }
-html[dir="rtl"] .newsletter-control { padding: 5px 15px 5px 5px; }
-html[dir="rtl"] .mobile-setting > span { grid-column: 1; }
-html[dir="rtl"] .mobile-setting strong { grid-column: 2; }
-html[dir="rtl"] .hero-button svg { transform: scaleX(-1); }
-html[dir="rtl"] .hero-button:hover svg { transform: scaleX(-1) translateX(3px); }
-html[dir="rtl"] .about-hero-image-wrap img { transform: scaleX(-1) scale(1.01); }
-html[dir="rtl"] .story-image img { transform: scaleX(-1); }
+html[dir="rtl"] .nav-dropdown a:focus-visible {
+    transform: translateX(-2px);
+}
+html[dir="rtl"] .footer-links a:hover {
+    transform: translateX(-5px);
+}
+html[dir="rtl"] .newsletter-control {
+    padding: 5px 15px 5px 5px;
+}
+html[dir="rtl"] .mobile-setting > span {
+    grid-column: 1;
+}
+html[dir="rtl"] .mobile-setting strong {
+    grid-column: 2;
+}
+html[dir="rtl"] .hero-button svg {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .hero-button:hover svg {
+    transform: scaleX(-1) translateX(3px);
+}
+html[dir="rtl"] .about-hero-image-wrap img {
+    transform: scaleX(-1) scale(1.01);
+}
+html[dir="rtl"] .story-image img {
+    transform: scaleX(-1);
+}
 html[dir="rtl"] .principle:hover::before,
-html[dir="rtl"] .principle:focus-visible::before { transform: translateY(-50%) translateX(5px); }
+html[dir="rtl"] .principle:focus-visible::before {
+    transform: translateY(-50%) translateX(5px);
+}
 @media (max-width: 650px) {
-  html[dir="rtl"] .principle:hover::before,
-  html[dir="rtl"] .principle:focus-visible::before { transform: translateX(4px); }
+    html[dir="rtl"] .principle:hover::before,
+    html[dir="rtl"] .principle:focus-visible::before {
+        transform: translateX(4px);
+    }
 }
-html[dir="rtl"] .journey-track::after { background: linear-gradient(-90deg, var(--color-accent), var(--color-primary)); transform-origin: right center; }
+html[dir="rtl"] .journey-track::after {
+    background: linear-gradient(-90deg, var(--color-accent), var(--color-primary));
+    transform-origin: right center;
+}
 @media (max-width: 740px) {
-  html[dir="rtl"] .journey-track::after { background: linear-gradient(180deg, var(--color-accent), var(--color-primary)); }
+    html[dir="rtl"] .journey-track::after {
+        background: linear-gradient(180deg, var(--color-accent), var(--color-primary));
+    }
 }
-html[dir="rtl"] .achievement-stat::after { box-shadow: -7px 0 0 rgba(212,167,44,.6), -14px 0 0 rgba(212,167,44,.3); }
-html[dir="rtl"] .about-gateway-arrow svg { transform: scaleX(-1); }
+html[dir="rtl"] .achievement-stat::after {
+    box-shadow:
+        -7px 0 0 rgba(212, 167, 44, 0.6),
+        -14px 0 0 rgba(212, 167, 44, 0.3);
+}
+html[dir="rtl"] .about-gateway-arrow svg {
+    transform: scaleX(-1);
+}
 html[dir="rtl"] .about-gateway-nav a:hover .about-gateway-destination strong,
-html[dir="rtl"] .about-gateway-nav a:focus-visible .about-gateway-destination strong { transform: translateX(-5px); }
-html[dir="rtl"] .about-gateway-nav a:hover .about-gateway-arrow,
-html[dir="rtl"] .about-gateway-nav a:focus-visible .about-gateway-arrow { transform: translateX(-7px); }
-html[dir="rtl"] .prg-hero-image img { transform: scaleX(-1) scale(1.01); }
-html[dir="rtl"] .prg-finder legend { padding: 13px 0 0 28px; }
-html[dir="rtl"] .prg-finder-message { margin: 0 0 0 auto; }
-html[dir="rtl"] .prg-assessment-link svg { transform: scaleX(-1); }
-html[dir="rtl"] .prg-assessment-link:hover svg { transform: scaleX(-1) translateX(3px); }
-@media (max-width: 900px) {
-  html[dir="rtl"] .prg-finder legend { padding: 0 0 18px; }
+html[dir="rtl"] .about-gateway-nav a:focus-visible .about-gateway-destination strong {
+    transform: translateX(-5px);
 }
-html[dir="rtl"] .prg-program-action svg { transform: scaleX(-1); }
-html[dir="rtl"] .prg-program[open] .prg-program-action svg { transform: scaleX(-1) rotate(180deg); }
+html[dir="rtl"] .about-gateway-nav a:hover .about-gateway-arrow,
+html[dir="rtl"] .about-gateway-nav a:focus-visible .about-gateway-arrow {
+    transform: translateX(-7px);
+}
+html[dir="rtl"] .prg-hero-image img {
+    transform: scaleX(-1) scale(1.01);
+}
+html[dir="rtl"] .prg-finder legend {
+    padding: 13px 0 0 28px;
+}
+html[dir="rtl"] .prg-finder-message {
+    margin: 0 0 0 auto;
+}
+html[dir="rtl"] .prg-assessment-link svg {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .prg-assessment-link:hover svg {
+    transform: scaleX(-1) translateX(3px);
+}
+@media (max-width: 900px) {
+    html[dir="rtl"] .prg-finder legend {
+        padding: 0 0 18px;
+    }
+}
+html[dir="rtl"] .prg-program-action svg {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .prg-program[open] .prg-program-action svg {
+    transform: scaleX(-1) rotate(180deg);
+}
 html[dir="rtl"] .prg-specialist-image img,
-html[dir="rtl"] .prg-specialist-mobile-body img { transform: scaleX(-1); }
-html[dir="rtl"] .prg-specialist-nav button > i::before { transform: translate(-35%,-50%) rotate(-135deg); }
-html[dir="rtl"] .prg-specialist-cta svg { transform: scaleX(-1); }
-html[dir="rtl"] .prg-week-day::before { transform-origin: right center; }
-html[dir="rtl"] .prg-fee-plan::before { transform-origin: right center; }
+html[dir="rtl"] .prg-specialist-mobile-body img {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .prg-specialist-nav button > i::before {
+    transform: translate(-35%, -50%) rotate(-135deg);
+}
+html[dir="rtl"] .prg-specialist-cta svg {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .prg-week-day::before {
+    transform-origin: right center;
+}
+html[dir="rtl"] .prg-fee-plan::before {
+    transform-origin: right center;
+}
 html[dir="rtl"] .prg-fee-plan > a svg,
 html[dir="rtl"] .prg-fee-plan > a:hover svg,
-html[dir="rtl"] .prg-fee-plan > a:focus-visible svg { transform: scaleX(-1) translateX(5px); }
-html[dir="rtl"] .staff-hero-visual img { transform: scaleX(-1); }
-html[dir="rtl"] .staff-hero-visual::after { background: linear-gradient(-90deg, transparent, rgba(6,28,20,.42)); }
-html[dir="rtl"] .coach-method::before { mask-image: linear-gradient(-90deg, #000, transparent 56%); }
-html[dir="rtl"] .coach-method-image img { transform: scaleX(-1); }
-html[dir="rtl"] .coach-method:hover .coach-method-image img { transform: scaleX(-1) scale(1.025); }
-html[dir="rtl"] .coach-method-stages::before { background: linear-gradient(-90deg, var(--color-accent), var(--color-primary)); }
-html[dir="rtl"] .head-coach-portrait img { transform: scaleX(-1); }
-html[dir="rtl"] .head-coach-profile:hover .head-coach-portrait img { transform: scaleX(-1) scale(1.018); }
-html[dir="rtl"] .head-coach-signature { transform: rotate(5deg); }
-html[dir="rtl"] .team-profile-image img { transform: scaleX(-1); }
-html[dir="rtl"] .team-profile:hover .team-profile-image img,
-html[dir="rtl"] .team-profile:focus-within .team-profile-image img { transform: scaleX(-1) scale(1.035); }
-html[dir="rtl"] .team-profile-body > a svg { transform: scaleX(-1); }
-html[dir="rtl"] .team-profile-body > a:hover svg,
-html[dir="rtl"] .team-profile-body > a:focus-visible svg { transform: scaleX(-1) translateX(4px); }
-html[dir="rtl"] .feedback-process-flow li::after { transform: scaleX(-1); }
-html[dir="rtl"] .feedback-connection svg { transform: scaleX(-1); }
-html[dir="rtl"] .feedback-handwritten { transform: rotate(3deg); }
-@media (max-width: 1050px) { html[dir="rtl"] .feedback-connection svg { transform: scaleX(-1) rotate(-90deg); } }
-@media (max-width: 650px) { html[dir="rtl"] .feedback-process-flow::after { background: linear-gradient(180deg, var(--color-accent), var(--color-primary)); } }
-html[dir="rtl"] .coach-consultation-actions svg { transform: scaleX(-1); }
-html[dir="rtl"] .coach-consultation-actions a:hover svg,
-html[dir="rtl"] .coach-consultation-actions a:focus-visible svg { transform: scaleX(-1) translateX(4px); }
-html[dir="rtl"] .coach-consultation-primary,
-html[dir="rtl"] .coach-consultation-secondary { border-radius: 12px 12px 12px 20px; }
-html[dir="rtl"] .coach-consultation-primary svg { border-radius: 9px 9px 9px 14px; }
-html[dir="rtl"] .facility-hero::before { mask-image: linear-gradient(-90deg, #000, transparent); }
-html[dir="rtl"] .facility-hero-visual::before { background: linear-gradient(-90deg, rgba(6,27,19,.28), transparent 28%), linear-gradient(180deg, transparent 56%, rgba(5,22,15,.55)); }
-html[dir="rtl"] .facility-hero-visual img { transform: scaleX(-1) scale(1.002); }
-html[dir="rtl"] .academy-map-route { transform: rotate(8deg); }
-html[dir="rtl"] .academy-map-pitch i:nth-child(1),
-html[dir="rtl"] .academy-map-pitch i:nth-child(2) { box-shadow: -8px 0 0 var(--color-accent), -16px 0 0 var(--color-accent); }
-html[dir="rtl"] .turf-feature-main > img,
-html[dir="rtl"] .turf-feature-details img { transform: scaleX(-1); }
-html[dir="rtl"] .turf-feature:hover .turf-feature-main > img { transform: scaleX(-1) scale(1.018); }
-html[dir="rtl"] .turf-feature-details figure:hover img { transform: scaleX(-1) scale(1.04); }
-html[dir="rtl"] .turf-dimension-length span { transform: translateY(-50%) rotate(90deg); transform-origin: right center; }
-html[dir="rtl"] .machine-feature::before { mask-image: linear-gradient(-90deg, transparent, #000 45%, transparent); }
-html[dir="rtl"] .machine-feature-visual img { transform: scaleX(-1); }
-html[dir="rtl"] .machine-feature:hover .machine-feature-visual img { transform: scaleX(-1) scale(1.018); }
-html[dir="rtl"] .machine-stumps { box-shadow: -8px 0 0 var(--color-accent), -16px 0 0 var(--color-accent); }
-html[dir="rtl"] .machine-flight-path { border-inline-end: 0; border-inline-start: 1px dashed var(--color-accent); border-radius: 0 0 0 65%; transform: skewY(-10deg); }
-html[dir="rtl"] .machine-flight-path i { inset-inline-end: auto; inset-inline-start: -5px; }
-html[dir="rtl"] .conditioning-feature-visual img { transform: scaleX(-1); }
-html[dir="rtl"] .conditioning-feature:hover .conditioning-feature-visual img { transform: scaleX(-1) scale(1.018); }
-html[dir="rtl"] .conditioning-movement-path { transform: scaleX(-1); }
-html[dir="rtl"] .analysis-freeze-frame img { transform: scaleX(-1); }
-html[dir="rtl"] .analysis-motion-path { transform: scaleX(-1); }
-html[dir="rtl"] .analysis-control svg { transform: scaleX(-1); }
-html[dir="rtl"] .ground-feature-visual > img { transform: scaleX(-1); }
-html[dir="rtl"] .ground-feature:hover .ground-feature-visual > img { transform: scaleX(-1) scale(1.012); }
-html[dir="rtl"] .ground-field-plan { transform: scaleX(-1); }
-html[dir="rtl"] .ground-pitch-indicator { transform: translate(50%,-50%); }
-html[dir="rtl"] .fees-hero-index { transform: none; }
-html[dir="rtl"] .fees-plan-spectrum ol::before { background: linear-gradient(-90deg, var(--color-accent), var(--color-primary)); }
-html[dir="rtl"] .fees-hero-fragment img { transform: scaleX(-1); }
-@media (max-width: 760px) { html[dir="rtl"] .fees-plan-spectrum ol::before { background: linear-gradient(180deg, var(--color-accent), var(--color-primary)); } }
-html[dir="rtl"] .fee-value-pitch i { box-shadow: -8px 0 0 var(--color-accent), -16px 0 0 var(--color-accent); }
-html[dir="rtl"] .node-time::after, html[dir="rtl"] .node-specialist::after { transform: rotate(-24deg) scaleX(-1); }
-html[dir="rtl"] .node-frequency::after, html[dir="rtl"] .node-review::after { transform: rotate(24deg); }
-html[dir="rtl"] .node-match::after { transform: none; }
-@media (min-width: 901px) {
-  html[dir="rtl"] .fee-value-model::before,
-  html[dir="rtl"] .fee-value-model::after,
-  html[dir="rtl"] .fee-value-pitch,
-  html[dir="rtl"] .fee-value-core { transform: translate(50%,-50%); }
+html[dir="rtl"] .prg-fee-plan > a:focus-visible svg {
+    transform: scaleX(-1) translateX(5px);
 }
-@media (max-width: 700px) {
-  html[dir="rtl"] .coach-method-stages::before { background: linear-gradient(180deg, var(--color-accent), var(--color-primary)); }
+html[dir="rtl"] .staff-hero-visual img {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .staff-hero-visual::after {
+    background: linear-gradient(-90deg, transparent, rgba(6, 28, 20, 0.42));
+}
+html[dir="rtl"] .coach-method::before {
+    mask-image: linear-gradient(-90deg, #000, transparent 56%);
+}
+html[dir="rtl"] .coach-method-image img {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .coach-method:hover .coach-method-image img {
+    transform: scaleX(-1) scale(1.025);
+}
+html[dir="rtl"] .coach-method-stages::before {
+    background: linear-gradient(-90deg, var(--color-accent), var(--color-primary));
+}
+html[dir="rtl"] .head-coach-portrait img {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .head-coach-profile:hover .head-coach-portrait img {
+    transform: scaleX(-1) scale(1.018);
+}
+html[dir="rtl"] .head-coach-signature {
+    transform: rotate(5deg);
+}
+html[dir="rtl"] .team-profile-image img {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .team-profile:hover .team-profile-image img,
+html[dir="rtl"] .team-profile:focus-within .team-profile-image img {
+    transform: scaleX(-1) scale(1.035);
+}
+html[dir="rtl"] .team-profile-body > a svg {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .team-profile-body > a:hover svg,
+html[dir="rtl"] .team-profile-body > a:focus-visible svg {
+    transform: scaleX(-1) translateX(4px);
+}
+html[dir="rtl"] .feedback-process-flow li::after {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .feedback-connection svg {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .feedback-handwritten {
+    transform: rotate(3deg);
+}
+@media (max-width: 1050px) {
+    html[dir="rtl"] .feedback-connection svg {
+        transform: scaleX(-1) rotate(-90deg);
+    }
+}
+@media (max-width: 650px) {
+    html[dir="rtl"] .feedback-process-flow::after {
+        background: linear-gradient(180deg, var(--color-accent), var(--color-primary));
+    }
+}
+html[dir="rtl"] .coach-consultation-actions svg {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .coach-consultation-actions a:hover svg,
+html[dir="rtl"] .coach-consultation-actions a:focus-visible svg {
+    transform: scaleX(-1) translateX(4px);
+}
+html[dir="rtl"] .coach-consultation-primary,
+html[dir="rtl"] .coach-consultation-secondary {
+    border-radius: 12px 12px 12px 20px;
+}
+html[dir="rtl"] .coach-consultation-primary svg {
+    border-radius: 9px 9px 9px 14px;
+}
+html[dir="rtl"] .facility-hero::before {
+    mask-image: linear-gradient(-90deg, #000, transparent);
+}
+html[dir="rtl"] .facility-hero-visual::before {
+    background:
+        linear-gradient(-90deg, rgba(6, 27, 19, 0.28), transparent 28%),
+        linear-gradient(180deg, transparent 56%, rgba(5, 22, 15, 0.55));
+}
+html[dir="rtl"] .facility-hero-visual img {
+    transform: scaleX(-1) scale(1.002);
+}
+html[dir="rtl"] .academy-map-route {
+    transform: rotate(8deg);
+}
+html[dir="rtl"] .academy-map-pitch i:nth-child(1),
+html[dir="rtl"] .academy-map-pitch i:nth-child(2) {
+    box-shadow:
+        -8px 0 0 var(--color-accent),
+        -16px 0 0 var(--color-accent);
+}
+html[dir="rtl"] .turf-feature-main > img,
+html[dir="rtl"] .turf-feature-details img {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .turf-feature:hover .turf-feature-main > img {
+    transform: scaleX(-1) scale(1.018);
+}
+html[dir="rtl"] .turf-feature-details figure:hover img {
+    transform: scaleX(-1) scale(1.04);
+}
+html[dir="rtl"] .turf-dimension-length span {
+    transform: translateY(-50%) rotate(90deg);
+    transform-origin: right center;
+}
+html[dir="rtl"] .machine-feature::before {
+    mask-image: linear-gradient(-90deg, transparent, #000 45%, transparent);
+}
+html[dir="rtl"] .machine-feature-visual img {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .machine-feature:hover .machine-feature-visual img {
+    transform: scaleX(-1) scale(1.018);
+}
+html[dir="rtl"] .machine-stumps {
+    box-shadow:
+        -8px 0 0 var(--color-accent),
+        -16px 0 0 var(--color-accent);
+}
+html[dir="rtl"] .machine-flight-path {
+    border-inline-end: 0;
+    border-inline-start: 1px dashed var(--color-accent);
+    border-radius: 0 0 0 65%;
+    transform: skewY(-10deg);
+}
+html[dir="rtl"] .machine-flight-path i {
+    inset-inline-end: auto;
+    inset-inline-start: -5px;
+}
+html[dir="rtl"] .conditioning-feature-visual img {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .conditioning-feature:hover .conditioning-feature-visual img {
+    transform: scaleX(-1) scale(1.018);
+}
+html[dir="rtl"] .conditioning-movement-path {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .analysis-freeze-frame img {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .analysis-motion-path {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .analysis-control svg {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .ground-feature-visual > img {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .ground-feature:hover .ground-feature-visual > img {
+    transform: scaleX(-1) scale(1.012);
+}
+html[dir="rtl"] .ground-field-plan {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .ground-pitch-indicator {
+    transform: translate(50%, -50%);
+}
+html[dir="rtl"] .fees-hero-index {
+    transform: none;
+}
+html[dir="rtl"] .fees-plan-spectrum ol::before {
+    background: linear-gradient(-90deg, var(--color-accent), var(--color-primary));
+}
+html[dir="rtl"] .fees-hero-fragment img {
+    transform: scaleX(-1);
 }
 @media (max-width: 760px) {
-  html[dir="rtl"] .staff-hero-visual::after { display: none; }
+    html[dir="rtl"] .fees-plan-spectrum ol::before {
+        background: linear-gradient(180deg, var(--color-accent), var(--color-primary));
+    }
+}
+html[dir="rtl"] .fee-value-pitch i {
+    box-shadow:
+        -8px 0 0 var(--color-accent),
+        -16px 0 0 var(--color-accent);
+}
+html[dir="rtl"] .node-time::after,
+html[dir="rtl"] .node-specialist::after {
+    transform: rotate(-24deg) scaleX(-1);
+}
+html[dir="rtl"] .node-frequency::after,
+html[dir="rtl"] .node-review::after {
+    transform: rotate(24deg);
+}
+html[dir="rtl"] .node-match::after {
+    transform: none;
+}
+@media (min-width: 901px) {
+    html[dir="rtl"] .fee-value-model::before,
+    html[dir="rtl"] .fee-value-model::after,
+    html[dir="rtl"] .fee-value-pitch,
+    html[dir="rtl"] .fee-value-core {
+        transform: translate(50%, -50%);
+    }
+}
+@media (max-width: 700px) {
+    html[dir="rtl"] .coach-method-stages::before {
+        background: linear-gradient(180deg, var(--color-accent), var(--color-primary));
+    }
+}
+@media (max-width: 760px) {
+    html[dir="rtl"] .staff-hero-visual::after {
+        display: none;
+    }
 }
 @media (max-width: 900px) and (min-width: 621px) {
-  html[dir="rtl"] .prg-program-action { writing-mode: vertical-lr; }
-  html[dir="rtl"] .prg-program-action svg { transform: scaleX(-1) rotate(-90deg); }
-  html[dir="rtl"] .prg-program[open] .prg-program-action svg { transform: scaleX(-1) rotate(90deg); }
+    html[dir="rtl"] .prg-program-action {
+        writing-mode: vertical-lr;
+    }
+    html[dir="rtl"] .prg-program-action svg {
+        transform: scaleX(-1) rotate(-90deg);
+    }
+    html[dir="rtl"] .prg-program[open] .prg-program-action svg {
+        transform: scaleX(-1) rotate(90deg);
+    }
 }
 html[dir="rtl"] .hero-button,
-html[dir="rtl"] .footer-button { border-radius: 0 0 0 14px; }
-html[dir="rtl"] .footer-cta-inner { border-radius: 0 0 0 46px; }
-html[dir="rtl"] .footer-button svg { transform: scaleX(-1); }
-html[dir="rtl"] .footer-button:hover svg { transform: scaleX(-1) translateX(3px); }
-html[dir="rtl"] .final-cta-primary { border-radius: 9px 9px 9px 18px; padding: 8px 22px 8px 9px; }
+html[dir="rtl"] .footer-button {
+    border-radius: 0 0 0 14px;
+}
+html[dir="rtl"] .footer-cta-inner {
+    border-radius: 0 0 0 46px;
+}
+html[dir="rtl"] .footer-button svg {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .footer-button:hover svg {
+    transform: scaleX(-1) translateX(3px);
+}
+html[dir="rtl"] .final-cta-primary {
+    border-radius: 9px 9px 9px 18px;
+    padding: 8px 22px 8px 9px;
+}
 html[dir="rtl"] .final-cta-primary svg,
-html[dir="rtl"] .final-cta-secondary svg { transform: scaleX(-1); }
+html[dir="rtl"] .final-cta-secondary svg {
+    transform: scaleX(-1);
+}
 html[dir="rtl"] .final-cta-primary:hover svg,
-html[dir="rtl"] .final-cta-secondary:hover svg { transform: scaleX(-1) translateX(3px); }
-html[dir="rtl"] .hp2-hero-image { animation: none; transform: scaleX(-1) scale(1.002); }
-html[dir="rtl"] .hp2-hero-overlay { background: linear-gradient(-90deg, rgba(10,36,26,.92) 0%, rgba(12,44,31,.79) 32%, rgba(10,38,27,.37) 64%, rgba(7,29,20,.14) 100%), linear-gradient(180deg, rgba(7,29,20,.08) 0%, transparent 45%, rgba(7,29,20,.82) 100%); }
-html[dir="rtl"] .hp2-button { border-radius: 2px 2px 2px 16px; padding: 8px 21px 8px 9px; }
-html[dir="rtl"] .hp2-button svg { border-radius: 2px 2px 2px 10px; transform: scaleX(-1); }
-html[dir="rtl"] .hp2-button:hover svg { transform: scaleX(-1) translateX(3px); }
-html[dir="rtl"] .hp2-scroll-cue { writing-mode: vertical-lr; }
-html[dir="rtl"] .hp2-assessment-track::after { background: linear-gradient(-90deg, var(--color-primary), var(--color-accent)); }
-html[dir="rtl"] .hp2-stage-marker > svg { border-radius: 12px 12px 12px 18px; }
-html[dir="rtl"] .hp2-pathway-level { border-inline-start: 1px solid var(--color-border); }
-html[dir="rtl"] .hp2-method-icon svg { border-radius: 12px 12px 12px 18px; }
+html[dir="rtl"] .final-cta-secondary:hover svg {
+    transform: scaleX(-1) translateX(3px);
+}
+html[dir="rtl"] .hp2-hero-image {
+    animation: none;
+    transform: scaleX(-1) scale(1.002);
+}
+html[dir="rtl"] .hp2-hero-overlay {
+    background:
+        linear-gradient(
+            -90deg,
+            rgba(10, 36, 26, 0.92) 0%,
+            rgba(12, 44, 31, 0.79) 32%,
+            rgba(10, 38, 27, 0.37) 64%,
+            rgba(7, 29, 20, 0.14) 100%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(7, 29, 20, 0.08) 0%,
+            transparent 45%,
+            rgba(7, 29, 20, 0.82) 100%
+        );
+}
+html[dir="rtl"] .hp2-button {
+    border-radius: 2px 2px 2px 16px;
+    padding: 8px 21px 8px 9px;
+}
+html[dir="rtl"] .hp2-button svg {
+    border-radius: 2px 2px 2px 10px;
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .hp2-button:hover svg {
+    transform: scaleX(-1) translateX(3px);
+}
+html[dir="rtl"] .hp2-scroll-cue {
+    writing-mode: vertical-lr;
+}
+html[dir="rtl"] .hp2-assessment-track::after {
+    background: linear-gradient(-90deg, var(--color-primary), var(--color-accent));
+}
+html[dir="rtl"] .hp2-stage-marker > svg {
+    border-radius: 12px 12px 12px 18px;
+}
+html[dir="rtl"] .hp2-pathway-level {
+    border-inline-start: 1px solid var(--color-border);
+}
+html[dir="rtl"] .hp2-method-icon svg {
+    border-radius: 12px 12px 12px 18px;
+}
 html[dir="rtl"] .hp2-method-node.is-tactical::after,
-html[dir="rtl"] .hp2-method-node.is-mental::after { transform: none; }
+html[dir="rtl"] .hp2-method-node.is-mental::after {
+    transform: none;
+}
 html[dir="rtl"] .hp2-method-node.is-technical::after,
-html[dir="rtl"] .hp2-method-node.is-physical::after { transform: scaleX(-1); }
-html[dir="rtl"] .hp2-discipline-visual > span::before { margin-inline: 0 10px; }
-html[dir="rtl"] .hp2-field-caption { transform: translateX(50%); }
-html[dir="rtl"] .hp2-join-step::after { transform: rotate(-135deg); }
-@media (max-width: 900px) { html[dir="rtl"] .hp2-join-step::after { transform: rotate(-135deg); } }
-html[dir="rtl"] .hp2-enrol-list li.is-confirmed { background: linear-gradient(-90deg, rgba(18,55,42,.07), transparent); }
-html[dir="rtl"] .hp2-conversion-secondary svg { transform: scaleX(-1); }
-html[dir="rtl"] .hp2-conversion-secondary:hover svg { transform: scaleX(-1) translateX(4px); }
-html[dir="rtl"] .philosophy-cta svg { transform: scaleX(-1); }
-html[dir="rtl"] .philosophy-cta:hover svg { transform: scaleX(-1) translateX(3px); }
-html[dir="rtl"] .program-link svg { transform: scaleX(-1); }
-html[dir="rtl"] .program-link:hover svg { transform: scaleX(-1) translateX(4px); }
-html[dir="rtl"] .coach-details > a svg { transform: scaleX(-1); }
-html[dir="rtl"] .dashboard-preview { transform: perspective(1500px) rotateY(2deg) rotateX(1deg); }
-html[dir="rtl"] .dashboard-preview:hover { transform: perspective(1500px) rotateY(0) rotateX(0) translateY(-3px); }
-html[dir="rtl"] .achievement-row:hover { background: linear-gradient(-90deg, rgba(212,167,44,.07), transparent); }
-html[dir="rtl"] .event-action > a svg { transform: scaleX(-1); }
-html[dir="rtl"] .event-action > a:hover svg { transform: scaleX(-1) translateX(3px); }
+html[dir="rtl"] .hp2-method-node.is-physical::after {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .hp2-discipline-visual > span::before {
+    margin-inline: 0 10px;
+}
+html[dir="rtl"] .hp2-field-caption {
+    transform: translateX(50%);
+}
+html[dir="rtl"] .hp2-join-step::after {
+    transform: rotate(-135deg);
+}
+@media (max-width: 900px) {
+    html[dir="rtl"] .hp2-join-step::after {
+        transform: rotate(-135deg);
+    }
+}
+html[dir="rtl"] .hp2-enrol-list li.is-confirmed {
+    background: linear-gradient(-90deg, rgba(18, 55, 42, 0.07), transparent);
+}
+html[dir="rtl"] .hp2-conversion-secondary svg {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .hp2-conversion-secondary:hover svg {
+    transform: scaleX(-1) translateX(4px);
+}
+html[dir="rtl"] .philosophy-cta svg {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .philosophy-cta:hover svg {
+    transform: scaleX(-1) translateX(3px);
+}
+html[dir="rtl"] .program-link svg {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .program-link:hover svg {
+    transform: scaleX(-1) translateX(4px);
+}
+html[dir="rtl"] .coach-details > a svg {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .dashboard-preview {
+    transform: perspective(1500px) rotateY(2deg) rotateX(1deg);
+}
+html[dir="rtl"] .dashboard-preview:hover {
+    transform: perspective(1500px) rotateY(0) rotateX(0) translateY(-3px);
+}
+html[dir="rtl"] .achievement-row:hover {
+    background: linear-gradient(-90deg, rgba(212, 167, 44, 0.07), transparent);
+}
+html[dir="rtl"] .event-action > a svg {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .event-action > a:hover svg {
+    transform: scaleX(-1) translateX(3px);
+}
 html[dir="rtl"] .testimonial-featured,
-html[dir="rtl"] .testimonial-card:last-child { border-radius: 2px 2px 2px 40px; }
-html[dir="rtl"] .fee-plan-action > a { padding: 10px 17px 10px 13px; border-radius: 8px 8px 8px 14px; }
-html[dir="rtl"] .fee-plan-action > a svg { border-radius: 7px 7px 7px 11px; transform: scaleX(-1); }
+html[dir="rtl"] .testimonial-card:last-child {
+    border-radius: 2px 2px 2px 40px;
+}
+html[dir="rtl"] .fee-plan-action > a {
+    padding: 10px 17px 10px 13px;
+    border-radius: 8px 8px 8px 14px;
+}
+html[dir="rtl"] .fee-plan-action > a svg {
+    border-radius: 7px 7px 7px 11px;
+    transform: scaleX(-1);
+}
 html[dir="rtl"] .fee-plan-action > a:hover svg,
-html[dir="rtl"] .fee-plan-action > a:focus-visible svg { transform: scaleX(-1) translateX(3px); }
-html[dir="rtl"] .fee-support-core::after { inset-inline: -220px auto; }
-html[dir="rtl"] .fee-comparison-select select { padding: 12px 20px 12px 58px; }
-html[dir="rtl"] .payment-availability-note { margin-inline: auto 0; }
-html[dir="rtl"] .fees-faq-answer p { padding-inline: 53px 70px; }
+html[dir="rtl"] .fee-plan-action > a:focus-visible svg {
+    transform: scaleX(-1) translateX(3px);
+}
+html[dir="rtl"] .fee-support-core::after {
+    inset-inline: -220px auto;
+}
+html[dir="rtl"] .fee-comparison-select select {
+    padding: 12px 20px 12px 58px;
+}
+html[dir="rtl"] .payment-availability-note {
+    margin-inline: auto 0;
+}
+html[dir="rtl"] .fees-faq-answer p {
+    padding-inline: 53px 70px;
+}
 @media (max-width: 650px) {
-  html[dir="rtl"] .fees-faq-answer p { padding-inline: 39px 46px; }
+    html[dir="rtl"] .fees-faq-answer p {
+        padding-inline: 39px 46px;
+    }
 }
 @media (max-width: 1250px) {
-  html[dir="rtl"] .fee-support-core::after { inset-inline: -120px auto; }
+    html[dir="rtl"] .fee-support-core::after {
+        inset-inline: -120px auto;
+    }
 }
 
 @media (max-width: 1023px) {
-  html[dir="rtl"] .dashboard-preview { transform: none; }
+    html[dir="rtl"] .dashboard-preview {
+        transform: none;
+    }
 }
 
 @media (max-width: 1023px) {
-  html[dir="rtl"] .mobile-menu { transform: translateX(-105%); }
-  html[dir="rtl"] .mobile-menu.is-open { transform: translateX(0); }
+    html[dir="rtl"] .mobile-menu {
+        transform: translateX(-105%);
+    }
+    html[dir="rtl"] .mobile-menu.is-open {
+        transform: translateX(0);
+    }
 }
 
 @media (max-width: 640px) {
-  html[dir="rtl"] .newsletter-control { padding: 10px; }
-  html[dir="rtl"] .footer-cta-inner { border-radius: 0 0 0 28px; }
+    html[dir="rtl"] .newsletter-control {
+        padding: 10px;
+    }
+    html[dir="rtl"] .footer-cta-inner {
+        border-radius: 0 0 0 28px;
+    }
 }
-html[dir="rtl"] .tournaments-hero-boundary { transform: translate(50%, -50%); }
-html[dir="rtl"] .tournaments-hero-cta svg { transform: scaleX(-1); }
-html[dir="rtl"] .tournaments-hero-cta:hover svg { transform: scaleX(-1) translateX(3px); }
-html[dir="rtl"] .tournaments-hero-cta { padding: 7px 30px 7px 8px; border-radius: 14px 14px 14px 22px; }
-html[dir="rtl"] .tournaments-hero-image { clip-path: polygon(0 0, 91% 0, 100% 9%, 100% 100%, 11% 100%, 0 92%); }
-html[dir="rtl"] .season-ribbon-track i { transform: translate(50%, -50%); }
-html[dir="rtl"] .season-glance-note { margin: 22px auto 0 0; }
+html[dir="rtl"] .tournaments-hero-boundary {
+    transform: translate(50%, -50%);
+}
+html[dir="rtl"] .tournaments-hero-cta svg {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .tournaments-hero-cta:hover svg {
+    transform: scaleX(-1) translateX(3px);
+}
+html[dir="rtl"] .tournaments-hero-cta {
+    padding: 7px 30px 7px 8px;
+    border-radius: 14px 14px 14px 22px;
+}
+html[dir="rtl"] .tournaments-hero-image {
+    clip-path: polygon(0 0, 91% 0, 100% 9%, 100% 100%, 11% 100%, 0 92%);
+}
+html[dir="rtl"] .season-ribbon-track i {
+    transform: translate(50%, -50%);
+}
+html[dir="rtl"] .season-glance-note {
+    margin: 22px auto 0 0;
+}
 html[dir="rtl"] .competition-poster::before,
-html[dir="rtl"] .competition-poster-copy::before { transform: skewX(9deg); }
+html[dir="rtl"] .competition-poster-copy::before {
+    transform: skewX(9deg);
+}
 html[dir="rtl"] .competition-poster-primary svg,
-html[dir="rtl"] .competition-poster-secondary svg { transform: scaleX(-1); }
+html[dir="rtl"] .competition-poster-secondary svg {
+    transform: scaleX(-1);
+}
 html[dir="rtl"] .competition-poster-primary:hover svg,
-html[dir="rtl"] .competition-poster-secondary:hover svg { transform: scaleX(-1) translateX(3px); }
-html[dir="rtl"] .competition-poster-visual::after { background: linear-gradient(-90deg, rgba(10,36,26,.42), transparent 30%), linear-gradient(180deg, transparent 56%, rgba(5,20,14,.7)); }
-html[dir="rtl"] .competition-pitch-lines { transform: perspective(300px) rotateX(58deg) rotateZ(8deg); }
-html[dir="rtl"] .fixture-row time span { transform: rotate(180deg); }
-html[dir="rtl"] .fixture-action svg { transform: scaleX(-1); }
-html[dir="rtl"] .fixture-action:hover { transform: translateX(-3px); }
-html[dir="rtl"] .fixture-action:hover svg { transform: scaleX(-1) translateX(2px); }
-html[dir="rtl"] .tournament-update-submit svg { transform: scaleX(-1); }
-html[dir="rtl"] .tournament-update-submit:hover svg { transform: scaleX(-1) translateX(3px); }
-html[dir="rtl"] .contact-hero-image { clip-path: polygon(0 0, 92% 0, 100% 9%, 100% 100%, 8% 100%, 0 91%); }
-html[dir="rtl"] .contact-hero-visual figcaption strong { text-align: start; }
-html[dir="rtl"] .contact-hero-route { transform: scaleX(-1); }
-html[dir="rtl"] .enquiry-route > svg { transform: scaleX(-1); }
-html[dir="rtl"] .enquiry-route:hover > svg { transform: scaleX(-1) translateX(3px); }
-html[dir="rtl"] .contact-form-submit { padding-inline: 23px 10px; }
-html[dir="rtl"] .contact-form-submit svg { transform: scaleX(-1); }
-html[dir="rtl"] .contact-form-submit:hover:not(:disabled) svg { transform: scaleX(-1) translateX(2px); }
-html[dir="rtl"] .academy-hours-row.is-current-day { box-shadow: inset -3px 0 0 var(--color-accent); }
-html[dir="rtl"] .academy-map-marker { transform: translate(50%, -100%) rotate(45deg); }
-html[dir="rtl"] .academy-map-marker .brand-mark { transform: rotate(-45deg); }
+html[dir="rtl"] .competition-poster-secondary:hover svg {
+    transform: scaleX(-1) translateX(3px);
+}
+html[dir="rtl"] .competition-poster-visual::after {
+    background:
+        linear-gradient(-90deg, rgba(10, 36, 26, 0.42), transparent 30%),
+        linear-gradient(180deg, transparent 56%, rgba(5, 20, 14, 0.7));
+}
+html[dir="rtl"] .competition-pitch-lines {
+    transform: perspective(300px) rotateX(58deg) rotateZ(8deg);
+}
+html[dir="rtl"] .fixture-row time span {
+    transform: rotate(180deg);
+}
+html[dir="rtl"] .fixture-action svg {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .fixture-action:hover {
+    transform: translateX(-3px);
+}
+html[dir="rtl"] .fixture-action:hover svg {
+    transform: scaleX(-1) translateX(2px);
+}
+html[dir="rtl"] .tournament-update-submit svg {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .tournament-update-submit:hover svg {
+    transform: scaleX(-1) translateX(3px);
+}
+html[dir="rtl"] .contact-hero-image {
+    clip-path: polygon(0 0, 92% 0, 100% 9%, 100% 100%, 8% 100%, 0 91%);
+}
+html[dir="rtl"] .contact-hero-visual figcaption strong {
+    text-align: start;
+}
+html[dir="rtl"] .contact-hero-route {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .enquiry-route > svg {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .enquiry-route:hover > svg {
+    transform: scaleX(-1) translateX(3px);
+}
+html[dir="rtl"] .contact-form-submit {
+    padding-inline: 23px 10px;
+}
+html[dir="rtl"] .contact-form-submit svg {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .contact-form-submit:hover:not(:disabled) svg {
+    transform: scaleX(-1) translateX(2px);
+}
+html[dir="rtl"] .academy-hours-row.is-current-day {
+    box-shadow: inset -3px 0 0 var(--color-accent);
+}
+html[dir="rtl"] .academy-map-marker {
+    transform: translate(50%, -100%) rotate(45deg);
+}
+html[dir="rtl"] .academy-map-marker .brand-mark {
+    transform: rotate(-45deg);
+}
 
 @media (max-width: 600px) {
-  html[dir="rtl"] .contact-hero-image { clip-path: polygon(0 0, 93% 0, 100% 12%, 100% 100%, 0 100%); }
+    html[dir="rtl"] .contact-hero-image {
+        clip-path: polygon(0 0, 93% 0, 100% 12%, 100% 100%, 0 100%);
+    }
 }
 html[dir="rtl"] .calendar-month-navigation button svg,
 html[dir="rtl"] .calendar-agenda button > svg,
-html[dir="rtl"] .calendar-event-action svg { transform: scaleX(-1); }
-html[dir="rtl"] .calendar-event-action:hover svg { transform: scaleX(-1) translateX(3px); }
+html[dir="rtl"] .calendar-event-action svg {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .calendar-event-action:hover svg {
+    transform: scaleX(-1) translateX(3px);
+}
 @media (max-width: 820px) {
-  html[dir="rtl"] .calendar-agenda button[aria-pressed="true"] { box-shadow: inset -3px 0 0 var(--color-accent); }
+    html[dir="rtl"] .calendar-agenda button[aria-pressed="true"] {
+        box-shadow: inset -3px 0 0 var(--color-accent);
+    }
 }
 @media (max-width: 780px) {
-  html[dir="rtl"] .tournaments-hero-boundary { transform: translateY(-50%); }
-  html[dir="rtl"] .tournaments-hero-image { clip-path: none; }
+    html[dir="rtl"] .tournaments-hero-boundary {
+        transform: translateY(-50%);
+    }
+    html[dir="rtl"] .tournaments-hero-image {
+        clip-path: none;
+    }
 }
 @media (max-width: 760px) {
-  html[dir="rtl"] .season-ribbon-track i { transform: translate(50%, -50%); }
-  html[dir="rtl"] .season-glance-note { margin-inline: 0; }
+    html[dir="rtl"] .season-ribbon-track i {
+        transform: translate(50%, -50%);
+    }
+    html[dir="rtl"] .season-glance-note {
+        margin-inline: 0;
+    }
 }
 @media (max-width: 600px) {
-  html[dir="rtl"] .fixture-row time span { transform: none; }
+    html[dir="rtl"] .fixture-row time span {
+        transform: none;
+    }
 }
 
-html[dir="rtl"] .auth-back svg { transform: scaleX(-1); }
-html[dir="rtl"] .auth-back:hover svg { transform: scaleX(-1) translateX(-3px); }
-html[dir="rtl"] .auth-brand-line { margin-inline: 65px 0; }
-html[dir="rtl"] .auth-submit { padding: 7px 24px 7px 8px; }
-html[dir="rtl"] .auth-submit svg, html[dir="rtl"] .auth-register svg { transform: scaleX(-1); }
-html[dir="rtl"] .auth-submit:hover:not(:disabled) svg { transform: scaleX(-1) translateX(2px); }
-@media (max-width: 620px) {
-  html[dir="rtl"] .auth-brand-line { margin-inline: 0; }
+html[dir="rtl"] .auth-back svg {
+    transform: scaleX(-1);
 }
-html[dir="rtl"] .register-submit svg, html[dir="rtl"] .register-success a::after { transform: scaleX(-1); }
-html[dir="rtl"] .error-primary svg, html[dir="rtl"] .error-secondary svg { transform: scaleX(-1); }
-html[dir="rtl"] .error-primary:hover svg { transform: scaleX(-1) translateX(2px); }
-html[dir="rtl"] .launch-notify-control button svg { transform: scaleX(-1); }
-html[dir="rtl"] .launch-notify-control button:hover { transform: translateX(-2px); }
-html[dir="rtl"] .mobile-dashboard-link.is-active { box-shadow: inset -3px 0 0 var(--color-accent); }
-html[dir="rtl"] .dashboard-sidebar { box-shadow: -12px 0 35px rgba(6,25,18,.08); }
-html[dir="rtl"] .dashboard-sidebar a.is-active { box-shadow: inset -3px 0 0 var(--color-accent); }
-html[dir="rtl"] .training-ticket-actions a::after { transform: scaleX(-1); }
+html[dir="rtl"] .auth-back:hover svg {
+    transform: scaleX(-1) translateX(-3px);
+}
+html[dir="rtl"] .auth-brand-line {
+    margin-inline: 65px 0;
+}
+html[dir="rtl"] .auth-submit {
+    padding: 7px 24px 7px 8px;
+}
+html[dir="rtl"] .auth-submit svg,
+html[dir="rtl"] .auth-register svg {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .auth-submit:hover:not(:disabled) svg {
+    transform: scaleX(-1) translateX(2px);
+}
+@media (max-width: 620px) {
+    html[dir="rtl"] .auth-brand-line {
+        margin-inline: 0;
+    }
+}
+html[dir="rtl"] .register-submit svg,
+html[dir="rtl"] .register-success a::after {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .error-primary svg,
+html[dir="rtl"] .error-secondary svg {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .error-primary:hover svg {
+    transform: scaleX(-1) translateX(2px);
+}
+html[dir="rtl"] .launch-notify-control button svg {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .launch-notify-control button:hover {
+    transform: translateX(-2px);
+}
+html[dir="rtl"] .mobile-dashboard-link.is-active {
+    box-shadow: inset -3px 0 0 var(--color-accent);
+}
+html[dir="rtl"] .dashboard-sidebar {
+    box-shadow: -12px 0 35px rgba(6, 25, 18, 0.08);
+}
+html[dir="rtl"] .dashboard-sidebar a.is-active {
+    box-shadow: inset -3px 0 0 var(--color-accent);
+}
+html[dir="rtl"] .training-ticket-actions a::after {
+    transform: scaleX(-1);
+}
 html[dir="rtl"] .portal-week-controls button svg,
-html[dir="rtl"] .portal-session-arrow { transform: scaleX(-1); }
-html[dir="rtl"] .portal-session:hover .portal-session-arrow { transform: scaleX(-1) translateX(3px); }
-html[dir="rtl"] .portal-session-dialog { margin: 0 auto 0 0; box-shadow: 25px 0 65px rgba(6,25,18,.25); }
-@media (max-width: 600px) { html[dir="rtl"] .portal-session-dialog { margin: auto 0 0; } }
-html[dir="rtl"] .attendance-month-controls > button svg { transform: scaleX(-1); }
-html[dir="rtl"] .next-competition footer button svg, html[dir="rtl"] .competition-deadline > a svg { transform: scaleX(-1); }
+html[dir="rtl"] .portal-session-arrow {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .portal-session:hover .portal-session-arrow {
+    transform: scaleX(-1) translateX(3px);
+}
+html[dir="rtl"] .portal-session-dialog {
+    margin: 0 auto 0 0;
+    box-shadow: 25px 0 65px rgba(6, 25, 18, 0.25);
+}
+@media (max-width: 600px) {
+    html[dir="rtl"] .portal-session-dialog {
+        margin: auto 0 0;
+    }
+}
+html[dir="rtl"] .attendance-month-controls > button svg {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .next-competition footer button svg,
+html[dir="rtl"] .competition-deadline > a svg {
+    transform: scaleX(-1);
+}
 @media (max-width: 1020px) {
-  html[dir="rtl"] .dashboard-sidebar { inset-inline: 0 auto; transform: translateX(-105%); }
-  html[dir="rtl"] .dashboard-sidebar.is-open { transform: translateX(0); }
+    html[dir="rtl"] .dashboard-sidebar {
+        inset-inline: 0 auto;
+        transform: translateX(-105%);
+    }
+    html[dir="rtl"] .dashboard-sidebar.is-open {
+        transform: translateX(0);
+    }
 }

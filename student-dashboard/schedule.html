@@ -1,98 +1,607 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en" dir="ltr" data-theme="light">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Weekly training batch schedule and session details.">
-  <title>Training Schedule | Vertex Cricket Academy</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/dark-mode.css">
-  <link rel="stylesheet" href="../assets/css/rtl.css">
-  <script src="../assets/js/main.js" defer></script>
-  <script src="../assets/js/dashboard.js" defer></script>
-</head>
-<body class="dashboard-page">
-  <a class="skip-link" href="#dashboard-content">Skip to dashboard content</a>
-  <header class="dashboard-header">
-    <a class="brand dashboard-brand" href="../pages/Homepage1.html" aria-label="Vertex Cricket Academy home">
-      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 3.5 41 10v12.2c0 10.4-6.8 18.5-17 22.3C13.8 40.7 7 32.6 7 22.2V10L24 3.5Z"/><path class="brand-mark-detail" d="M17.2 31.8V17.6m4.5 14.2V17.6m4.6 14.2V17.6M15 17.6h13.5M14.5 31.8H29"/><circle class="brand-mark-ball" cx="32.6" cy="14.2" r="5.2"/><path class="brand-mark-seam" d="M29.5 10.7c1.8 1.5 3.9 3.8 6.1 7"/></svg></span>
-      <span class="brand-copy"><span class="brand-name">Vertex</span><span class="brand-descriptor">Student &amp; Parent Portal</span></span>
-    </a>
-    <div class="dashboard-header-actions">
-      <button class="dashboard-menu-toggle" type="button" aria-label="Open portal navigation" aria-expanded="false" aria-controls="dashboard-sidebar"><span></span><span></span><span></span></button>
-      <button class="icon-button theme-toggle dashboard-desktop-utility" type="button" aria-label="Switch to dark mode" title="Switch to dark mode"><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.4A8.5 8.5 0 0 1 8.6 3.8 8.6 8.6 0 1 0 20.2 15.4Z"/></svg><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
-      <button class="icon-button direction-toggle dashboard-desktop-utility" type="button" aria-label="Switch to RTL" title="Switch to RTL"><span data-direction-short>RTL</span></button>
-      <div class="dashboard-popover">
-        <button class="dashboard-notification-toggle" type="button" aria-label="Notifications, 3 unread" aria-expanded="false" aria-controls="dashboard-notifications"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9Z"/><path d="M10 21h4"/></svg><span>3</span></button>
-        <div class="dashboard-notifications" id="dashboard-notifications" hidden>
-          <header><span>Notifications</span><small>3 unread</small></header>
-          <ul><li><strong>Training Schedule Updated</strong><p>Thursday batting session moved to 5:30 PM.</p></li><li><strong>Coach Feedback Added</strong><p>New feedback is available from your latest session.</p></li><li><strong>Trial Registration Reminder</strong><p>U16 selection trial registration closes in 3 days.</p></li></ul>
-          <a href="dashboard.html">View All Notifications</a>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Weekly training batch schedule and session details." />
+        <title>Training Schedule | Vertex Cricket Academy</title>
+        <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+        <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+        <link rel="stylesheet" href="../assets/css/rtl.css" />
+        <link rel="stylesheet" href="../assets/css/coaching.css" />
+        <script src="../assets/js/main.js" defer></script>
+        <script src="../assets/js/dashboard.js" defer></script>
+    </head>
+    <body class="dashboard-page">
+        <a class="skip-link" href="#dashboard-content">Skip to dashboard content</a>
+        <header class="dashboard-header">
+            <a
+                class="brand dashboard-brand"
+                href="../pages/Homepage1.html"
+                aria-label="Vertex Cricket Academy home"
+            >
+                <span class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                        <path
+                            d="M24 3.5 41 10v12.2c0 10.4-6.8 18.5-17 22.3C13.8 40.7 7 32.6 7 22.2V10L24 3.5Z"
+                        />
+                        <path
+                            class="brand-mark-detail"
+                            d="M17.2 31.8V17.6m4.5 14.2V17.6m4.6 14.2V17.6M15 17.6h13.5M14.5 31.8H29"
+                        />
+                        <circle class="brand-mark-ball" cx="32.6" cy="14.2" r="5.2" />
+                        <path class="brand-mark-seam" d="M29.5 10.7c1.8 1.5 3.9 3.8 6.1 7" />
+                    </svg>
+                </span>
+                <span class="brand-copy">
+                    <span class="brand-name">Vertex</span>
+                    <span class="brand-descriptor">Student &amp; Parent Portal</span>
+                </span>
+            </a>
+            <div class="dashboard-header-actions">
+                <button
+                    class="dashboard-menu-toggle"
+                    type="button"
+                    aria-label="Open portal navigation"
+                    aria-expanded="false"
+                    aria-controls="dashboard-sidebar"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <button
+                    class="icon-button theme-toggle dashboard-desktop-utility"
+                    type="button"
+                    aria-label="Switch to dark mode"
+                    title="Switch to dark mode"
+                >
+                    <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20.2 15.4A8.5 8.5 0 0 1 8.6 3.8 8.6 8.6 0 1 0 20.2 15.4Z" /></svg
+                    ><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="3.5" />
+                        <path
+                            d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+                        />
+                    </svg>
+                </button>
+                <button
+                    class="icon-button direction-toggle dashboard-desktop-utility"
+                    type="button"
+                    aria-label="Switch to RTL"
+                    title="Switch to RTL"
+                >
+                    <span data-direction-short>RTL</span>
+                </button>
+                <div class="dashboard-popover">
+                    <button
+                        class="dashboard-notification-toggle"
+                        type="button"
+                        aria-label="Notifications, 3 unread"
+                        aria-expanded="false"
+                        aria-controls="dashboard-notifications"
+                    >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9Z" />
+                            <path d="M10 21h4" />
+                        </svg>
+                        <span>3</span>
+                    </button>
+                    <div class="dashboard-notifications" id="dashboard-notifications" hidden>
+                        <header>
+                            <span>Notifications</span>
+                            <small>3 unread</small>
+                        </header>
+                        <ul>
+                            <li>
+                                <strong>Training Schedule Updated</strong>
+                                <p>Thursday batting session moved to 5:30 PM.</p>
+                            </li>
+                            <li>
+                                <strong>Coach Feedback Added</strong>
+                                <p>New feedback is available from your latest session.</p>
+                            </li>
+                            <li>
+                                <strong>Trial Registration Reminder</strong>
+                                <p>U16 selection trial registration closes in 3 days.</p>
+                            </li>
+                        </ul>
+                        <a href="dashboard.html">View All Notifications</a>
+                    </div>
+                </div>
+                <div class="dashboard-popover">
+                    <button
+                        class="dashboard-profile-toggle"
+                        type="button"
+                        aria-label="Open account menu for Arjun Rao"
+                        aria-expanded="false"
+                        aria-controls="dashboard-profile-menu"
+                    >
+                        <span class="dashboard-avatar" aria-hidden="true">
+                            <img
+                                src="../assets/images/testimonial-rohan-kumar.webp"
+                                data-student-src="../assets/images/testimonial-rohan-kumar.webp"
+                                data-parent-src="../assets/images/testimonial-sunita-mehra.webp"
+                                alt=""
+                                width="320"
+                                height="320"
+                            />
+                        </span>
+                        <span class="dashboard-profile-copy">
+                            <strong data-role-account-name>Arjun Rao</strong>
+                            <small data-role-pill>Student</small>
+                        </span>
+                        <svg viewBox="0 0 12 8" aria-hidden="true"><path d="m1 1.5 5 5 5-5" /></svg>
+                    </button>
+                    <div class="dashboard-profile-menu" id="dashboard-profile-menu" hidden>
+                        <span data-role-account-label>Player account</span>
+                        <strong data-role-menu-name>Arjun Rao</strong>
+                        <small data-role-menu-detail>Student View &middot; U16</small>
+                        <div class="dashboard-role-preview">
+                            <span>
+                                View as
+                                <small>Demo preview</small>
+                            </span>
+                            <div role="group" aria-label="Preview portal as student or parent">
+                                <button
+                                    type="button"
+                                    data-dashboard-role="student"
+                                    aria-pressed="true"
+                                >
+                                    Student
+                                </button>
+                                <button
+                                    type="button"
+                                    data-dashboard-role="parent"
+                                    aria-pressed="false"
+                                >
+                                    Parent
+                                </button>
+                            </div>
+                        </div>
+                        <div class="dashboard-viewing-player" data-parent-context hidden>
+                            <span>Viewing player</span>
+                            <strong>
+                                Arjun Rao
+                                <small>U16 Performance</small>
+                            </strong>
+                        </div>
+                        <nav aria-label="Account menu">
+                            <a href="profile.html" data-role-profile-link>My Profile</a>
+                            <a href="settings.html">Account Settings</a>
+                            <a href="../pages/Homepage1.html">Back to Website</a>
+                            <a href="../pages/login.html">Logout</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="dashboard-shell">
+            <div class="dashboard-sidebar-overlay" data-dashboard-overlay></div>
+            <aside
+                class="dashboard-sidebar"
+                id="dashboard-sidebar"
+                aria-hidden="false"
+                aria-label="Student and parent portal navigation"
+            >
+                <div class="dashboard-sidebar-head">
+                    <span>
+                        <strong>Player Performance Portal</strong>
+                        <small>Student &amp; Parent Access</small>
+                    </span>
+                    <button
+                        class="dashboard-sidebar-close"
+                        type="button"
+                        aria-label="Close portal navigation"
+                    >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="m5 5 14 14M19 5 5 19" />
+                        </svg>
+                    </button>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li>
+                            <a href="schedule.html" class="is-active" aria-current="page">
+                                Schedule
+                            </a>
+                        </li>
+                        <li><a href="attendance.html">Attendance</a></li>
+                        <li><a href="feedback.html">Coach Feedback</a></li>
+                        <li><a href="tournaments.html">Tournaments & Trials</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="settings.html">Settings</a></li>
+                        <li><a href="../pages/login.html">Logout</a></li>
+                    </ul>
+                </nav>
+                <section class="dashboard-next-session" aria-labelledby="next-session-title">
+                    <span>Next Session</span>
+                    <h2 id="next-session-title">Batting Development</h2>
+                    <p>Thursday &middot; 5:30 PM</p>
+                    <dl>
+                        <dt>Coach</dt>
+                        <dd>R. Sharma</dd>
+                    </dl>
+                    <a href="schedule.html">View Schedule</a>
+                </section>
+            </aside>
+            <main class="dashboard-content" id="dashboard-content" tabindex="-1">
+                <header class="dashboard-page-intro portal-schedule-intro">
+                    <span>Training Schedule</span>
+                    <h1
+                        data-student-text="Your Training Week"
+                        data-parent-text="Arjun’s Training Week"
+                    >
+                        Your Training Week
+                    </h1>
+                    <p>
+                        See upcoming coaching sessions, training focus, coach assignments and
+                        schedule updates.
+                    </p>
+                </header>
+
+                <div class="portal-schedule-workspace">
+                    <section class="portal-week-controls" aria-label="Choose training week">
+                        <button type="button" aria-label="Show previous training week">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m15 18-6-6 6-6" />
+                            </svg>
+                            <span>Previous Week</span>
+                        </button>
+                        <div>
+                            <span>Current training week</span>
+                            <strong>02 &ndash; 08 September 2026</strong>
+                        </div>
+                        <button type="button">
+                            <span>Next Week</span>
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m9 18 6-6-6-6" />
+                            </svg>
+                        </button>
+                        <button class="portal-today-button" type="button">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="12" cy="12" r="8" />
+                                <circle cx="12" cy="12" r="2" />
+                            </svg>
+                            Today
+                        </button>
+                    </section>
+
+                    <section class="portal-training-load" aria-labelledby="training-load-title">
+                        <div>
+                            <span>Weekly Performance Load</span>
+                            <h2 id="training-load-title">A balanced training week.</h2>
+                        </div>
+                        <dl>
+                            <div>
+                                <dt>Sessions</dt>
+                                <dd>4</dd>
+                            </div>
+                            <div>
+                                <dt>Training Time</dt>
+                                <dd>
+                                    7.5
+                                    <small>hrs</small>
+                                </dd>
+                            </div>
+                            <div>
+                                <dt>Skill Sessions</dt>
+                                <dd>2</dd>
+                            </div>
+                            <div>
+                                <dt>Fitness</dt>
+                                <dd>1</dd>
+                            </div>
+                            <div>
+                                <dt>Match Practice</dt>
+                                <dd>1</dd>
+                            </div>
+                        </dl>
+                    </section>
+
+                    <section class="portal-roster" aria-labelledby="weekly-roster-title">
+                        <header>
+                            <div>
+                                <span>Performance Batch &middot; U16</span>
+                                <h2 id="weekly-roster-title">Weekly Training Roster</h2>
+                            </div>
+                            <div class="portal-status-key" aria-label="Schedule status key">
+                                <span class="is-completed">Completed</span>
+                                <span class="is-upcoming">Upcoming</span>
+                                <span class="is-rescheduled">Rescheduled</span>
+                                <span class="is-cancelled">Cancelled</span>
+                            </div>
+                        </header>
+                        <ol>
+                            <li>
+                                <button
+                                    class="portal-session is-completed"
+                                    type="button"
+                                    data-session-title="Fitness &amp; Mobility"
+                                    data-session-time="5:30 PM – 6:30 PM"
+                                    data-session-coach="S. Kumar"
+                                    data-session-venue="Conditioning Zone"
+                                    data-session-focus="Mobility preparation|Core stability|Movement quality"
+                                    aria-haspopup="dialog"
+                                >
+                                    <time datetime="2026-09-02">
+                                        <span>Monday</span>
+                                        <strong>02</strong>
+                                        <small>Sep</small>
+                                    </time>
+                                    <div class="portal-session-main">
+                                        <span>Conditioning Session</span>
+                                        <h3>Fitness &amp; Mobility</h3>
+                                        <p>5:30 PM &ndash; 6:30 PM</p>
+                                    </div>
+                                    <dl>
+                                        <div>
+                                            <dt>Coach</dt>
+                                            <dd>S. Kumar</dd>
+                                        </div>
+                                        <div>
+                                            <dt>Venue</dt>
+                                            <dd>Conditioning Zone</dd>
+                                        </div>
+                                        <div>
+                                            <dt>Batch</dt>
+                                            <dd>U16 Performance</dd>
+                                        </div>
+                                    </dl>
+                                    <span class="portal-session-status">
+                                        <svg viewBox="0 0 18 18" aria-hidden="true">
+                                            <path d="m4 9 3 3 7-7" />
+                                        </svg>
+                                        Completed
+                                    </span>
+                                    <svg
+                                        class="portal-session-arrow"
+                                        viewBox="0 0 24 24"
+                                        aria-hidden="true"
+                                    >
+                                        <path d="m9 18 6-6-6-6" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li>
+                                <button
+                                    class="portal-session is-completed"
+                                    type="button"
+                                    data-session-title="Batting Technique"
+                                    data-session-time="5:00 PM – 6:30 PM"
+                                    data-session-coach="R. Sharma"
+                                    data-session-venue="Turf Nets 1–2"
+                                    data-session-focus="Bat path control|Head position|Contact timing"
+                                    aria-haspopup="dialog"
+                                >
+                                    <time datetime="2026-09-03">
+                                        <span>Tuesday</span>
+                                        <strong>03</strong>
+                                        <small>Sep</small>
+                                    </time>
+                                    <div class="portal-session-main">
+                                        <span>Skill Session</span>
+                                        <h3>Batting Technique</h3>
+                                        <p>5:00 PM &ndash; 6:30 PM</p>
+                                    </div>
+                                    <dl>
+                                        <div>
+                                            <dt>Coach</dt>
+                                            <dd>R. Sharma</dd>
+                                        </div>
+                                        <div>
+                                            <dt>Venue</dt>
+                                            <dd>Turf Nets 1&ndash;2</dd>
+                                        </div>
+                                        <div>
+                                            <dt>Batch</dt>
+                                            <dd>U16 Performance</dd>
+                                        </div>
+                                    </dl>
+                                    <span class="portal-session-status">
+                                        <svg viewBox="0 0 18 18" aria-hidden="true">
+                                            <path d="m4 9 3 3 7-7" />
+                                        </svg>
+                                        Completed
+                                    </span>
+                                    <svg
+                                        class="portal-session-arrow"
+                                        viewBox="0 0 24 24"
+                                        aria-hidden="true"
+                                    >
+                                        <path d="m9 18 6-6-6-6" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li>
+                                <button
+                                    class="portal-session is-upcoming is-featured"
+                                    type="button"
+                                    data-session-title="Batting Development"
+                                    data-session-time="5:30 PM – 7:00 PM"
+                                    data-session-coach="R. Sharma"
+                                    data-session-venue="Turf Nets 2–3"
+                                    data-session-focus="Front-foot movement|Full-length pace|Strike rotation"
+                                    aria-haspopup="dialog"
+                                >
+                                    <time datetime="2026-09-05">
+                                        <span>Thursday</span>
+                                        <strong>05</strong>
+                                        <small>Sep</small>
+                                    </time>
+                                    <div class="portal-session-main">
+                                        <span>Next Training Session</span>
+                                        <h3>Batting Development</h3>
+                                        <p>5:30 PM &ndash; 7:00 PM</p>
+                                    </div>
+                                    <dl>
+                                        <div>
+                                            <dt>Coach</dt>
+                                            <dd>R. Sharma</dd>
+                                        </div>
+                                        <div>
+                                            <dt>Venue</dt>
+                                            <dd>Turf Nets 2&ndash;3</dd>
+                                        </div>
+                                        <div>
+                                            <dt>Batch</dt>
+                                            <dd>U16 Performance</dd>
+                                        </div>
+                                    </dl>
+                                    <span class="portal-session-status">
+                                        <svg viewBox="0 0 18 18" aria-hidden="true">
+                                            <circle cx="9" cy="9" r="6" />
+                                            <path d="M9 5.5V9l2.5 1.5" />
+                                        </svg>
+                                        Upcoming
+                                    </span>
+                                    <svg
+                                        class="portal-session-arrow"
+                                        viewBox="0 0 24 24"
+                                        aria-hidden="true"
+                                    >
+                                        <path d="m9 18 6-6-6-6" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li>
+                                <button
+                                    class="portal-session is-upcoming"
+                                    type="button"
+                                    data-session-title="Practice Match"
+                                    data-session-time="7:00 AM – 10:00 AM"
+                                    data-session-coach="Academy Coaching Team"
+                                    data-session-venue="Main Ground"
+                                    data-session-focus="Match awareness|Strike rotation|Field communication"
+                                    aria-haspopup="dialog"
+                                >
+                                    <time datetime="2026-09-07">
+                                        <span>Saturday</span>
+                                        <strong>07</strong>
+                                        <small>Sep</small>
+                                    </time>
+                                    <div class="portal-session-main">
+                                        <span>Match Practice</span>
+                                        <h3>Practice Match</h3>
+                                        <p>7:00 AM &ndash; 10:00 AM</p>
+                                    </div>
+                                    <dl>
+                                        <div>
+                                            <dt>Coach</dt>
+                                            <dd>Coaching Team</dd>
+                                        </div>
+                                        <div>
+                                            <dt>Venue</dt>
+                                            <dd>Main Ground</dd>
+                                        </div>
+                                        <div>
+                                            <dt>Batch</dt>
+                                            <dd>U16 Performance</dd>
+                                        </div>
+                                    </dl>
+                                    <span class="portal-session-status">
+                                        <svg viewBox="0 0 18 18" aria-hidden="true">
+                                            <circle cx="9" cy="9" r="6" />
+                                            <path d="M9 5.5V9l2.5 1.5" />
+                                        </svg>
+                                        Upcoming
+                                    </span>
+                                    <svg
+                                        class="portal-session-arrow"
+                                        viewBox="0 0 24 24"
+                                        aria-hidden="true"
+                                    >
+                                        <path d="m9 18 6-6-6-6" />
+                                    </svg>
+                                </button>
+                            </li>
+                        </ol>
+                        <aside class="portal-reschedule-example">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M20 7h-6V1M4 17h6v6" />
+                                <path d="M5.1 9A8 8 0 0 1 18 4l2 3M18.9 15A8 8 0 0 1 6 20l-2-3" />
+                            </svg>
+                            <div>
+                                <span>How schedule changes appear</span>
+                                <p>
+                                    <strong>Rescheduled:</strong>
+                                    previous time
+                                    <s>4:30 PM</s>
+                                    <span aria-hidden="true">→</span>
+                                    new time
+                                    <ins>5:30 PM</ins>
+                                    . Cancelled sessions display a clear cancellation icon and
+                                    label.
+                                </p>
+                            </div>
+                        </aside>
+                    </section>
+                </div>
+
+                <dialog
+                    class="portal-session-dialog"
+                    id="session-detail-dialog"
+                    aria-labelledby="session-dialog-title"
+                >
+                    <div class="portal-session-dialog-inner">
+                        <header>
+                            <div>
+                                <span>Session Details</span>
+                                <h2 id="session-dialog-title" data-session-dialog-title>
+                                    Batting Development
+                                </h2>
+                            </div>
+                            <button
+                                type="button"
+                                data-session-dialog-close
+                                aria-label="Close session details"
+                            >
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="m5 5 14 14M19 5 5 19" />
+                                </svg>
+                            </button>
+                        </header>
+                        <div class="portal-session-dialog-meta">
+                            <div>
+                                <span>Time</span>
+                                <strong data-session-dialog-time>5:30 PM &ndash; 7:00 PM</strong>
+                            </div>
+                            <div>
+                                <span>Coach</span>
+                                <strong data-session-dialog-coach>R. Sharma</strong>
+                            </div>
+                            <div>
+                                <span>Venue</span>
+                                <strong data-session-dialog-venue>Turf Nets 2&ndash;3</strong>
+                            </div>
+                        </div>
+                        <section>
+                            <span>Training Focus</span>
+                            <ul data-session-dialog-focus>
+                                <li>Front-foot movement</li>
+                                <li>Full-length pace</li>
+                                <li>Strike rotation</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <span>Bring to Training</span>
+                            <ul class="portal-equipment-list">
+                                <li>Bat</li>
+                                <li>Helmet</li>
+                                <li>Pads</li>
+                                <li>Water bottle</li>
+                            </ul>
+                        </section>
+                        <aside>
+                            <span>Coach Note</span>
+                            <p>Arrive 10 minutes early for warm-up.</p>
+                        </aside>
+                    </div>
+                </dialog>
+            </main>
         </div>
-      </div>
-      <div class="dashboard-popover">
-        <button class="dashboard-profile-toggle" type="button" aria-label="Open account menu for Arjun Rao" aria-expanded="false" aria-controls="dashboard-profile-menu"><span class="dashboard-avatar" aria-hidden="true"><img src="../assets/images/testimonial-rohan-kumar.webp" data-student-src="../assets/images/testimonial-rohan-kumar.webp" data-parent-src="../assets/images/testimonial-sunita-mehra.webp" alt="" width="320" height="320"></span><span class="dashboard-profile-copy"><strong data-role-account-name>Arjun Rao</strong><small data-role-pill>Student</small></span><svg viewBox="0 0 12 8" aria-hidden="true"><path d="m1 1.5 5 5 5-5"/></svg></button>
-        <div class="dashboard-profile-menu" id="dashboard-profile-menu" hidden>
-          <span data-role-account-label>Player account</span><strong data-role-menu-name>Arjun Rao</strong><small data-role-menu-detail>Student View &middot; U16</small>
-          <div class="dashboard-role-preview"><span>View as <small>Demo preview</small></span><div role="group" aria-label="Preview portal as student or parent"><button type="button" data-dashboard-role="student" aria-pressed="true">Student</button><button type="button" data-dashboard-role="parent" aria-pressed="false">Parent</button></div></div>
-          <div class="dashboard-viewing-player" data-parent-context hidden><span>Viewing player</span><strong>Arjun Rao <small>U16 Performance</small></strong></div>
-          <nav aria-label="Account menu"><a href="profile.html" data-role-profile-link>My Profile</a><a href="settings.html">Account Settings</a><a href="../pages/Homepage1.html">Back to Website</a><a href="../pages/login.html">Logout</a></nav>
-        </div>
-      </div>
-    </div>
-  </header>
-  <div class="dashboard-shell">
-    <div class="dashboard-sidebar-overlay" data-dashboard-overlay></div>
-    <aside class="dashboard-sidebar" id="dashboard-sidebar" aria-hidden="false" aria-label="Student and parent portal navigation">
-      <div class="dashboard-sidebar-head"><span><strong>Player Performance Portal</strong><small>Student &amp; Parent Access</small></span><button class="dashboard-sidebar-close" type="button" aria-label="Close portal navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg></button></div>
-      <nav>
-        <ul>
-          <li><a href="dashboard.html">Dashboard</a></li>
-          <li><a href="schedule.html" class="is-active" aria-current="page">Schedule</a></li>
-          <li><a href="attendance.html">Attendance</a></li>
-          <li><a href="feedback.html">Coach Feedback</a></li>
-          <li><a href="tournaments.html">Tournaments & Trials</a></li>
-          <li><a href="profile.html">Profile</a></li>
-          <li><a href="settings.html">Settings</a></li>
-          <li><a href="../pages/login.html">Logout</a></li>
-        </ul>
-      </nav>
-      <section class="dashboard-next-session" aria-labelledby="next-session-title">
-        <span>Next Session</span><h2 id="next-session-title">Batting Development</h2><p>Thursday &middot; 5:30 PM</p><dl><dt>Coach</dt><dd>R. Sharma</dd></dl><a href="schedule.html">View Schedule</a>
-      </section>
-    </aside>
-    <main class="dashboard-content" id="dashboard-content" tabindex="-1">
-      <header class="dashboard-page-intro portal-schedule-intro">
-        <span>Training Schedule</span>
-        <h1 data-student-text="Your Training Week" data-parent-text="Arjun’s Training Week">Your Training Week</h1>
-        <p>See upcoming coaching sessions, training focus, coach assignments and schedule updates.</p>
-      </header>
-
-      <div class="portal-schedule-workspace">
-        <section class="portal-week-controls" aria-label="Choose training week">
-          <button type="button" aria-label="Show previous training week"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg><span>Previous Week</span></button>
-          <div><span>Current training week</span><strong>02 &ndash; 08 September 2026</strong></div>
-          <button type="button"><span>Next Week</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
-          <button class="portal-today-button" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2"/></svg>Today</button>
-        </section>
-
-        <section class="portal-training-load" aria-labelledby="training-load-title"><div><span>Weekly Performance Load</span><h2 id="training-load-title">A balanced training week.</h2></div><dl><div><dt>Sessions</dt><dd>4</dd></div><div><dt>Training Time</dt><dd>7.5 <small>hrs</small></dd></div><div><dt>Skill Sessions</dt><dd>2</dd></div><div><dt>Fitness</dt><dd>1</dd></div><div><dt>Match Practice</dt><dd>1</dd></div></dl></section>
-
-        <section class="portal-roster" aria-labelledby="weekly-roster-title">
-          <header><div><span>Performance Batch &middot; U16</span><h2 id="weekly-roster-title">Weekly Training Roster</h2></div><div class="portal-status-key" aria-label="Schedule status key"><span class="is-completed">Completed</span><span class="is-upcoming">Upcoming</span><span class="is-rescheduled">Rescheduled</span><span class="is-cancelled">Cancelled</span></div></header>
-          <ol>
-            <li><button class="portal-session is-completed" type="button" data-session-title="Fitness &amp; Mobility" data-session-time="5:30 PM – 6:30 PM" data-session-coach="S. Kumar" data-session-venue="Conditioning Zone" data-session-focus="Mobility preparation|Core stability|Movement quality" aria-haspopup="dialog"><time datetime="2026-09-02"><span>Monday</span><strong>02</strong><small>Sep</small></time><div class="portal-session-main"><span>Conditioning Session</span><h3>Fitness &amp; Mobility</h3><p>5:30 PM &ndash; 6:30 PM</p></div><dl><div><dt>Coach</dt><dd>S. Kumar</dd></div><div><dt>Venue</dt><dd>Conditioning Zone</dd></div><div><dt>Batch</dt><dd>U16 Performance</dd></div></dl><span class="portal-session-status"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="m4 9 3 3 7-7"/></svg>Completed</span><svg class="portal-session-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button></li>
-            <li><button class="portal-session is-completed" type="button" data-session-title="Batting Technique" data-session-time="5:00 PM – 6:30 PM" data-session-coach="R. Sharma" data-session-venue="Turf Nets 1–2" data-session-focus="Bat path control|Head position|Contact timing" aria-haspopup="dialog"><time datetime="2026-09-03"><span>Tuesday</span><strong>03</strong><small>Sep</small></time><div class="portal-session-main"><span>Skill Session</span><h3>Batting Technique</h3><p>5:00 PM &ndash; 6:30 PM</p></div><dl><div><dt>Coach</dt><dd>R. Sharma</dd></div><div><dt>Venue</dt><dd>Turf Nets 1&ndash;2</dd></div><div><dt>Batch</dt><dd>U16 Performance</dd></div></dl><span class="portal-session-status"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="m4 9 3 3 7-7"/></svg>Completed</span><svg class="portal-session-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button></li>
-            <li><button class="portal-session is-upcoming is-featured" type="button" data-session-title="Batting Development" data-session-time="5:30 PM – 7:00 PM" data-session-coach="R. Sharma" data-session-venue="Turf Nets 2–3" data-session-focus="Front-foot movement|Full-length pace|Strike rotation" aria-haspopup="dialog"><time datetime="2026-09-05"><span>Thursday</span><strong>05</strong><small>Sep</small></time><div class="portal-session-main"><span>Next Training Session</span><h3>Batting Development</h3><p>5:30 PM &ndash; 7:00 PM</p></div><dl><div><dt>Coach</dt><dd>R. Sharma</dd></div><div><dt>Venue</dt><dd>Turf Nets 2&ndash;3</dd></div><div><dt>Batch</dt><dd>U16 Performance</dd></div></dl><span class="portal-session-status"><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="M9 5.5V9l2.5 1.5"/></svg>Upcoming</span><svg class="portal-session-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button></li>
-            <li><button class="portal-session is-upcoming" type="button" data-session-title="Practice Match" data-session-time="7:00 AM – 10:00 AM" data-session-coach="Academy Coaching Team" data-session-venue="Main Ground" data-session-focus="Match awareness|Strike rotation|Field communication" aria-haspopup="dialog"><time datetime="2026-09-07"><span>Saturday</span><strong>07</strong><small>Sep</small></time><div class="portal-session-main"><span>Match Practice</span><h3>Practice Match</h3><p>7:00 AM &ndash; 10:00 AM</p></div><dl><div><dt>Coach</dt><dd>Coaching Team</dd></div><div><dt>Venue</dt><dd>Main Ground</dd></div><div><dt>Batch</dt><dd>U16 Performance</dd></div></dl><span class="portal-session-status"><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="M9 5.5V9l2.5 1.5"/></svg>Upcoming</span><svg class="portal-session-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button></li>
-          </ol>
-          <aside class="portal-reschedule-example"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7h-6V1M4 17h6v6"/><path d="M5.1 9A8 8 0 0 1 18 4l2 3M18.9 15A8 8 0 0 1 6 20l-2-3"/></svg><div><span>How schedule changes appear</span><p><strong>Rescheduled:</strong> previous time <s>4:30 PM</s> <span aria-hidden="true">→</span> new time <ins>5:30 PM</ins>. Cancelled sessions display a clear cancellation icon and label.</p></div></aside>
-        </section>
-      </div>
-
-      <dialog class="portal-session-dialog" id="session-detail-dialog" aria-labelledby="session-dialog-title"><div class="portal-session-dialog-inner"><header><div><span>Session Details</span><h2 id="session-dialog-title" data-session-dialog-title>Batting Development</h2></div><button type="button" data-session-dialog-close aria-label="Close session details"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg></button></header><div class="portal-session-dialog-meta"><div><span>Time</span><strong data-session-dialog-time>5:30 PM &ndash; 7:00 PM</strong></div><div><span>Coach</span><strong data-session-dialog-coach>R. Sharma</strong></div><div><span>Venue</span><strong data-session-dialog-venue>Turf Nets 2&ndash;3</strong></div></div><section><span>Training Focus</span><ul data-session-dialog-focus><li>Front-foot movement</li><li>Full-length pace</li><li>Strike rotation</li></ul></section><section><span>Bring to Training</span><ul class="portal-equipment-list"><li>Bat</li><li>Helmet</li><li>Pads</li><li>Water bottle</li></ul></section><aside><span>Coach Note</span><p>Arrive 10 minutes early for warm-up.</p></aside></div></dialog>
-    </main>
-  </div>
-</body>
+    </body>
 </html>
-

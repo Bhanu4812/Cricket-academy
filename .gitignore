@@ -1,0 +1,5 @@
+# Local browser checks and exported screenshots.
+qa/
+node_modules/
+playwright-report/
+test-results/

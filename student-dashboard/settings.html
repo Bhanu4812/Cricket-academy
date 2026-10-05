@@ -1,85 +1,567 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en" dir="ltr" data-theme="light">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portal preferences, notifications and account settings.">
-  <title>Portal Settings | Vertex Cricket Academy</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/dark-mode.css">
-  <link rel="stylesheet" href="../assets/css/rtl.css">
-  <script src="../assets/js/main.js" defer></script>
-  <script src="../assets/js/dashboard.js" defer></script>
-</head>
-<body class="dashboard-page">
-  <a class="skip-link" href="#dashboard-content">Skip to dashboard content</a>
-  <header class="dashboard-header">
-    <a class="brand dashboard-brand" href="../pages/Homepage1.html" aria-label="Vertex Cricket Academy home">
-      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 3.5 41 10v12.2c0 10.4-6.8 18.5-17 22.3C13.8 40.7 7 32.6 7 22.2V10L24 3.5Z"/><path class="brand-mark-detail" d="M17.2 31.8V17.6m4.5 14.2V17.6m4.6 14.2V17.6M15 17.6h13.5M14.5 31.8H29"/><circle class="brand-mark-ball" cx="32.6" cy="14.2" r="5.2"/><path class="brand-mark-seam" d="M29.5 10.7c1.8 1.5 3.9 3.8 6.1 7"/></svg></span>
-      <span class="brand-copy"><span class="brand-name">Vertex</span><span class="brand-descriptor">Student &amp; Parent Portal</span></span>
-    </a>
-    <div class="dashboard-header-actions">
-      <button class="dashboard-menu-toggle" type="button" aria-label="Open portal navigation" aria-expanded="false" aria-controls="dashboard-sidebar"><span></span><span></span><span></span></button>
-      <button class="icon-button theme-toggle dashboard-desktop-utility" type="button" aria-label="Switch to dark mode" title="Switch to dark mode"><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.4A8.5 8.5 0 0 1 8.6 3.8 8.6 8.6 0 1 0 20.2 15.4Z"/></svg><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
-      <button class="icon-button direction-toggle dashboard-desktop-utility" type="button" aria-label="Switch to RTL" title="Switch to RTL"><span data-direction-short>RTL</span></button>
-      <div class="dashboard-popover">
-        <button class="dashboard-notification-toggle" type="button" aria-label="Notifications, 3 unread" aria-expanded="false" aria-controls="dashboard-notifications"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9Z"/><path d="M10 21h4"/></svg><span>3</span></button>
-        <div class="dashboard-notifications" id="dashboard-notifications" hidden>
-          <header><span>Notifications</span><small>3 unread</small></header>
-          <ul><li><strong>Training Schedule Updated</strong><p>Thursday batting session moved to 5:30 PM.</p></li><li><strong>Coach Feedback Added</strong><p>New feedback is available from your latest session.</p></li><li><strong>Trial Registration Reminder</strong><p>U16 selection trial registration closes in 3 days.</p></li></ul>
-          <a href="dashboard.html">View All Notifications</a>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Portal preferences, notifications and account settings."
+        />
+        <title>Portal Settings | Vertex Cricket Academy</title>
+        <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+        <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+        <link rel="stylesheet" href="../assets/css/rtl.css" />
+        <link rel="stylesheet" href="../assets/css/coaching.css" />
+        <script src="../assets/js/main.js" defer></script>
+        <script src="../assets/js/dashboard.js" defer></script>
+    </head>
+    <body class="dashboard-page">
+        <a class="skip-link" href="#dashboard-content">Skip to dashboard content</a>
+        <header class="dashboard-header">
+            <a
+                class="brand dashboard-brand"
+                href="../pages/Homepage1.html"
+                aria-label="Vertex Cricket Academy home"
+            >
+                <span class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                        <path
+                            d="M24 3.5 41 10v12.2c0 10.4-6.8 18.5-17 22.3C13.8 40.7 7 32.6 7 22.2V10L24 3.5Z"
+                        />
+                        <path
+                            class="brand-mark-detail"
+                            d="M17.2 31.8V17.6m4.5 14.2V17.6m4.6 14.2V17.6M15 17.6h13.5M14.5 31.8H29"
+                        />
+                        <circle class="brand-mark-ball" cx="32.6" cy="14.2" r="5.2" />
+                        <path class="brand-mark-seam" d="M29.5 10.7c1.8 1.5 3.9 3.8 6.1 7" />
+                    </svg>
+                </span>
+                <span class="brand-copy">
+                    <span class="brand-name">Vertex</span>
+                    <span class="brand-descriptor">Student &amp; Parent Portal</span>
+                </span>
+            </a>
+            <div class="dashboard-header-actions">
+                <button
+                    class="dashboard-menu-toggle"
+                    type="button"
+                    aria-label="Open portal navigation"
+                    aria-expanded="false"
+                    aria-controls="dashboard-sidebar"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <button
+                    class="icon-button theme-toggle dashboard-desktop-utility"
+                    type="button"
+                    aria-label="Switch to dark mode"
+                    title="Switch to dark mode"
+                >
+                    <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20.2 15.4A8.5 8.5 0 0 1 8.6 3.8 8.6 8.6 0 1 0 20.2 15.4Z" /></svg
+                    ><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="3.5" />
+                        <path
+                            d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+                        />
+                    </svg>
+                </button>
+                <button
+                    class="icon-button direction-toggle dashboard-desktop-utility"
+                    type="button"
+                    aria-label="Switch to RTL"
+                    title="Switch to RTL"
+                >
+                    <span data-direction-short>RTL</span>
+                </button>
+                <div class="dashboard-popover">
+                    <button
+                        class="dashboard-notification-toggle"
+                        type="button"
+                        aria-label="Notifications, 3 unread"
+                        aria-expanded="false"
+                        aria-controls="dashboard-notifications"
+                    >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9Z" />
+                            <path d="M10 21h4" />
+                        </svg>
+                        <span>3</span>
+                    </button>
+                    <div class="dashboard-notifications" id="dashboard-notifications" hidden>
+                        <header>
+                            <span>Notifications</span>
+                            <small>3 unread</small>
+                        </header>
+                        <ul>
+                            <li>
+                                <strong>Training Schedule Updated</strong>
+                                <p>Thursday batting session moved to 5:30 PM.</p>
+                            </li>
+                            <li>
+                                <strong>Coach Feedback Added</strong>
+                                <p>New feedback is available from your latest session.</p>
+                            </li>
+                            <li>
+                                <strong>Trial Registration Reminder</strong>
+                                <p>U16 selection trial registration closes in 3 days.</p>
+                            </li>
+                        </ul>
+                        <a href="dashboard.html">View All Notifications</a>
+                    </div>
+                </div>
+                <div class="dashboard-popover">
+                    <button
+                        class="dashboard-profile-toggle"
+                        type="button"
+                        aria-label="Open account menu for Arjun Rao"
+                        aria-expanded="false"
+                        aria-controls="dashboard-profile-menu"
+                    >
+                        <span class="dashboard-avatar" aria-hidden="true">
+                            <img
+                                src="../assets/images/testimonial-rohan-kumar.webp"
+                                data-student-src="../assets/images/testimonial-rohan-kumar.webp"
+                                data-parent-src="../assets/images/testimonial-sunita-mehra.webp"
+                                alt=""
+                                width="320"
+                                height="320"
+                            />
+                        </span>
+                        <span class="dashboard-profile-copy">
+                            <strong data-role-account-name>Arjun Rao</strong>
+                            <small data-role-pill>Student</small>
+                        </span>
+                        <svg viewBox="0 0 12 8" aria-hidden="true"><path d="m1 1.5 5 5 5-5" /></svg>
+                    </button>
+                    <div class="dashboard-profile-menu" id="dashboard-profile-menu" hidden>
+                        <span data-role-account-label>Player account</span>
+                        <strong data-role-menu-name>Arjun Rao</strong>
+                        <small data-role-menu-detail>Student View &middot; U16</small>
+                        <div class="dashboard-role-preview">
+                            <span>
+                                View as
+                                <small>Demo preview</small>
+                            </span>
+                            <div role="group" aria-label="Preview portal as student or parent">
+                                <button
+                                    type="button"
+                                    data-dashboard-role="student"
+                                    aria-pressed="true"
+                                >
+                                    Student
+                                </button>
+                                <button
+                                    type="button"
+                                    data-dashboard-role="parent"
+                                    aria-pressed="false"
+                                >
+                                    Parent
+                                </button>
+                            </div>
+                        </div>
+                        <div class="dashboard-viewing-player" data-parent-context hidden>
+                            <span>Viewing player</span>
+                            <strong>
+                                Arjun Rao
+                                <small>U16 Performance</small>
+                            </strong>
+                        </div>
+                        <nav aria-label="Account menu">
+                            <a href="profile.html" data-role-profile-link>My Profile</a>
+                            <a href="settings.html">Account Settings</a>
+                            <a href="../pages/Homepage1.html">Back to Website</a>
+                            <a href="../pages/login.html">Logout</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="dashboard-shell">
+            <div class="dashboard-sidebar-overlay" data-dashboard-overlay></div>
+            <aside
+                class="dashboard-sidebar"
+                id="dashboard-sidebar"
+                aria-hidden="false"
+                aria-label="Student and parent portal navigation"
+            >
+                <div class="dashboard-sidebar-head">
+                    <span>
+                        <strong>Player Performance Portal</strong>
+                        <small>Student &amp; Parent Access</small>
+                    </span>
+                    <button
+                        class="dashboard-sidebar-close"
+                        type="button"
+                        aria-label="Close portal navigation"
+                    >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="m5 5 14 14M19 5 5 19" />
+                        </svg>
+                    </button>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="schedule.html">Schedule</a></li>
+                        <li><a href="attendance.html">Attendance</a></li>
+                        <li><a href="feedback.html">Coach Feedback</a></li>
+                        <li><a href="tournaments.html">Tournaments & Trials</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li>
+                            <a href="settings.html" class="is-active" aria-current="page">
+                                Settings
+                            </a>
+                        </li>
+                        <li><a href="../pages/login.html">Logout</a></li>
+                    </ul>
+                </nav>
+                <section class="dashboard-next-session" aria-labelledby="next-session-title">
+                    <span>Next Session</span>
+                    <h2 id="next-session-title">Batting Development</h2>
+                    <p>Thursday &middot; 5:30 PM</p>
+                    <dl>
+                        <dt>Coach</dt>
+                        <dd>R. Sharma</dd>
+                    </dl>
+                    <a href="schedule.html">View Schedule</a>
+                </section>
+            </aside>
+            <main class="dashboard-content" id="dashboard-content" tabindex="-1">
+                <header class="dashboard-page-intro portal-settings-intro">
+                    <span>Settings</span>
+                    <h1
+                        data-student-text="Portal Preferences"
+                        data-parent-text="Portal Preferences"
+                    >
+                        Portal Preferences
+                    </h1>
+                    <p>Manage account preferences, notifications and accessibility settings.</p>
+                </header>
+                <div class="portal-settings-workspace">
+                    <section
+                        class="settings-group settings-account"
+                        aria-labelledby="settings-account-title"
+                    >
+                        <header>
+                            <span>01</span>
+                            <div>
+                                <p>Account</p>
+                                <h2 id="settings-account-title">Contact &amp; Sign-in</h2>
+                            </div>
+                        </header>
+                        <div class="settings-group-body">
+                            <dl>
+                                <div>
+                                    <dt>Email</dt>
+                                    <dd>arjun.rao@example.com</dd>
+                                </div>
+                                <div>
+                                    <dt>Phone</dt>
+                                    <dd>+1 (317) 555-0142</dd>
+                                </div>
+                                <div>
+                                    <dt>Password</dt>
+                                    <dd>
+                                        Last changed
+                                        <span>Demo information</span>
+                                    </dd>
+                                </div>
+                            </dl>
+                            <div class="settings-actions">
+                                <button type="button" data-settings-contact>
+                                    Update Contact Details
+                                </button>
+                                <button type="button" data-settings-password>
+                                    Change Password
+                                </button>
+                            </div>
+                            <p
+                                class="settings-inline-message"
+                                data-settings-account-message
+                                aria-live="polite"
+                            ></p>
+                        </div>
+                    </section>
+
+                    <section
+                        class="settings-group settings-notifications"
+                        aria-labelledby="settings-notifications-title"
+                    >
+                        <header>
+                            <span>02</span>
+                            <div>
+                                <p>Notifications</p>
+                                <h2 id="settings-notifications-title">Academy Updates</h2>
+                            </div>
+                        </header>
+                        <div class="settings-group-body">
+                            <fieldset>
+                                <legend>Notification topics</legend>
+                                <label>
+                                    <span>
+                                        <strong>Training Schedule Changes</strong>
+                                        <small>Session time, venue and rescheduling updates</small>
+                                    </span>
+                                    <input
+                                        type="checkbox"
+                                        data-notification-key="schedule"
+                                        checked
+                                    />
+                                    <i aria-hidden="true"></i>
+                                </label>
+                                <label>
+                                    <span>
+                                        <strong>Coach Feedback</strong>
+                                        <small>New post-session coaching notes</small>
+                                    </span>
+                                    <input
+                                        type="checkbox"
+                                        data-notification-key="feedback"
+                                        checked
+                                    />
+                                    <i aria-hidden="true"></i>
+                                </label>
+                                <label>
+                                    <span>
+                                        <strong>Attendance Updates</strong>
+                                        <small>Recorded attendance and corrections</small>
+                                    </span>
+                                    <input
+                                        type="checkbox"
+                                        data-notification-key="attendance"
+                                        checked
+                                    />
+                                    <i aria-hidden="true"></i>
+                                </label>
+                                <label>
+                                    <span>
+                                        <strong>Tournament Announcements</strong>
+                                        <small>Competition details and registrations</small>
+                                    </span>
+                                    <input
+                                        type="checkbox"
+                                        data-notification-key="tournaments"
+                                        checked
+                                    />
+                                    <i aria-hidden="true"></i>
+                                </label>
+                                <label>
+                                    <span>
+                                        <strong>Selection Trial Deadlines</strong>
+                                        <small>Trial registration and deadline reminders</small>
+                                    </span>
+                                    <input type="checkbox" data-notification-key="trials" checked />
+                                    <i aria-hidden="true"></i>
+                                </label>
+                                <label>
+                                    <span>
+                                        <strong>Academy Notices</strong>
+                                        <small>Important operational academy information</small>
+                                    </span>
+                                    <input
+                                        type="checkbox"
+                                        data-notification-key="academy"
+                                        checked
+                                    />
+                                    <i aria-hidden="true"></i>
+                                </label>
+                            </fieldset>
+                            <fieldset class="notification-channels">
+                                <legend>Delivery channels</legend>
+                                <label>
+                                    <span>
+                                        <strong>Email</strong>
+                                        <small>Send enabled topics to your account email</small>
+                                    </span>
+                                    <input
+                                        type="checkbox"
+                                        data-notification-key="channel_email"
+                                        checked
+                                    />
+                                    <i aria-hidden="true"></i>
+                                </label>
+                                <label>
+                                    <span>
+                                        <strong>Portal Notification</strong>
+                                        <small>Show enabled topics in the dashboard header</small>
+                                    </span>
+                                    <input
+                                        type="checkbox"
+                                        data-notification-key="channel_portal"
+                                        checked
+                                    />
+                                    <i aria-hidden="true"></i>
+                                </label>
+                            </fieldset>
+                            <p
+                                class="settings-save-state"
+                                data-notification-status
+                                aria-live="polite"
+                            >
+                                Preferences are stored locally for this template preview.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section
+                        class="settings-group settings-appearance"
+                        aria-labelledby="settings-appearance-title"
+                    >
+                        <header>
+                            <span>03</span>
+                            <div>
+                                <p>Appearance</p>
+                                <h2 id="settings-appearance-title">Display Preferences</h2>
+                            </div>
+                        </header>
+                        <div class="settings-group-body">
+                            <fieldset>
+                                <legend>Theme</legend>
+                                <p>Choose how the portal surface responds to your device.</p>
+                                <div
+                                    class="settings-segmented"
+                                    role="group"
+                                    aria-label="Choose portal theme"
+                                >
+                                    <button
+                                        type="button"
+                                        data-theme-preference="light"
+                                        aria-pressed="false"
+                                    >
+                                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <circle cx="12" cy="12" r="4" />
+                                            <path
+                                                d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2"
+                                            />
+                                        </svg>
+                                        Light
+                                    </button>
+                                    <button
+                                        type="button"
+                                        data-theme-preference="dark"
+                                        aria-pressed="false"
+                                    >
+                                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <path
+                                                d="M20 15.5A8.5 8.5 0 0 1 8.5 4 8.5 8.5 0 1 0 20 15.5Z"
+                                            />
+                                        </svg>
+                                        Dark
+                                    </button>
+                                    <button
+                                        type="button"
+                                        data-theme-preference="system"
+                                        aria-pressed="false"
+                                    >
+                                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <rect x="3" y="4" width="18" height="14" rx="2" />
+                                            <path d="M8 22h8m-4-4v4" />
+                                        </svg>
+                                        System
+                                    </button>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Reading Direction</legend>
+                                <p>Switch the complete dashboard layout direction.</p>
+                                <div
+                                    class="settings-segmented settings-direction-options"
+                                    role="group"
+                                    aria-label="Choose reading direction"
+                                >
+                                    <button
+                                        type="button"
+                                        data-direction-preference="ltr"
+                                        aria-pressed="false"
+                                    >
+                                        LTR
+                                        <small>Left to right</small>
+                                    </button>
+                                    <button
+                                        type="button"
+                                        data-direction-preference="rtl"
+                                        aria-pressed="false"
+                                    >
+                                        RTL
+                                        <small>Right to left</small>
+                                    </button>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </section>
+
+                    <section
+                        class="settings-group settings-parent-access"
+                        data-parent-context
+                        hidden
+                        aria-labelledby="parent-access-title"
+                    >
+                        <header>
+                            <span>04</span>
+                            <div>
+                                <p>Player Access</p>
+                                <h2 id="parent-access-title">Currently Viewing</h2>
+                            </div>
+                        </header>
+                        <div class="settings-group-body">
+                            <div class="settings-viewing-player">
+                                <img
+                                    src="../assets/images/testimonial-rohan-kumar.webp"
+                                    alt=""
+                                    width="320"
+                                    height="320"
+                                />
+                                <div>
+                                    <strong>Arjun Rao</strong>
+                                    <span>U16 Performance Batch</span>
+                                    <small>
+                                        This template currently demonstrates one linked player.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section
+                        class="settings-group settings-privacy"
+                        aria-labelledby="settings-privacy-title"
+                    >
+                        <header>
+                            <span>05</span>
+                            <div>
+                                <p>Privacy &amp; Session</p>
+                                <h2 id="settings-privacy-title">Account Privacy</h2>
+                            </div>
+                        </header>
+                        <div class="settings-group-body">
+                            <div class="settings-privacy-copy">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <rect x="4" y="10" width="16" height="11" rx="2" />
+                                    <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+                                </svg>
+                                <p>
+                                    Portal information is shown only for the current demo account.
+                                    This static template does not provide device or session
+                                    management.
+                                </p>
+                            </div>
+                            <a href="../pages/login.html">
+                                Sign out of this device
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M10 17l5-5-5-5m5 5H3M14 3h6a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-6"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </main>
         </div>
-      </div>
-      <div class="dashboard-popover">
-        <button class="dashboard-profile-toggle" type="button" aria-label="Open account menu for Arjun Rao" aria-expanded="false" aria-controls="dashboard-profile-menu"><span class="dashboard-avatar" aria-hidden="true"><img src="../assets/images/testimonial-rohan-kumar.webp" data-student-src="../assets/images/testimonial-rohan-kumar.webp" data-parent-src="../assets/images/testimonial-sunita-mehra.webp" alt="" width="320" height="320"></span><span class="dashboard-profile-copy"><strong data-role-account-name>Arjun Rao</strong><small data-role-pill>Student</small></span><svg viewBox="0 0 12 8" aria-hidden="true"><path d="m1 1.5 5 5 5-5"/></svg></button>
-        <div class="dashboard-profile-menu" id="dashboard-profile-menu" hidden>
-          <span data-role-account-label>Player account</span><strong data-role-menu-name>Arjun Rao</strong><small data-role-menu-detail>Student View &middot; U16</small>
-          <div class="dashboard-role-preview"><span>View as <small>Demo preview</small></span><div role="group" aria-label="Preview portal as student or parent"><button type="button" data-dashboard-role="student" aria-pressed="true">Student</button><button type="button" data-dashboard-role="parent" aria-pressed="false">Parent</button></div></div>
-          <div class="dashboard-viewing-player" data-parent-context hidden><span>Viewing player</span><strong>Arjun Rao <small>U16 Performance</small></strong></div>
-          <nav aria-label="Account menu"><a href="profile.html" data-role-profile-link>My Profile</a><a href="settings.html">Account Settings</a><a href="../pages/Homepage1.html">Back to Website</a><a href="../pages/login.html">Logout</a></nav>
-        </div>
-      </div>
-    </div>
-  </header>
-  <div class="dashboard-shell">
-    <div class="dashboard-sidebar-overlay" data-dashboard-overlay></div>
-    <aside class="dashboard-sidebar" id="dashboard-sidebar" aria-hidden="false" aria-label="Student and parent portal navigation">
-      <div class="dashboard-sidebar-head"><span><strong>Player Performance Portal</strong><small>Student &amp; Parent Access</small></span><button class="dashboard-sidebar-close" type="button" aria-label="Close portal navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg></button></div>
-      <nav>
-        <ul>
-          <li><a href="dashboard.html">Dashboard</a></li>
-          <li><a href="schedule.html">Schedule</a></li>
-          <li><a href="attendance.html">Attendance</a></li>
-          <li><a href="feedback.html">Coach Feedback</a></li>
-          <li><a href="tournaments.html">Tournaments & Trials</a></li>
-          <li><a href="profile.html">Profile</a></li>
-          <li><a href="settings.html" class="is-active" aria-current="page">Settings</a></li>
-          <li><a href="../pages/login.html">Logout</a></li>
-        </ul>
-      </nav>
-      <section class="dashboard-next-session" aria-labelledby="next-session-title">
-        <span>Next Session</span><h2 id="next-session-title">Batting Development</h2><p>Thursday &middot; 5:30 PM</p><dl><dt>Coach</dt><dd>R. Sharma</dd></dl><a href="schedule.html">View Schedule</a>
-      </section>
-    </aside>
-    <main class="dashboard-content" id="dashboard-content" tabindex="-1">
-      <header class="dashboard-page-intro portal-settings-intro">
-        <span>Settings</span>
-        <h1 data-student-text="Portal Preferences" data-parent-text="Portal Preferences">Portal Preferences</h1>
-        <p>Manage account preferences, notifications and accessibility settings.</p>
-      </header>
-      <div class="portal-settings-workspace">
-        <section class="settings-group settings-account" aria-labelledby="settings-account-title"><header><span>01</span><div><p>Account</p><h2 id="settings-account-title">Contact &amp; Sign-in</h2></div></header><div class="settings-group-body"><dl><div><dt>Email</dt><dd>arjun.rao@example.com</dd></div><div><dt>Phone</dt><dd>+1 (317) 555-0142</dd></div><div><dt>Password</dt><dd>Last changed <span>Demo information</span></dd></div></dl><div class="settings-actions"><button type="button" data-settings-contact>Update Contact Details</button><button type="button" data-settings-password>Change Password</button></div><p class="settings-inline-message" data-settings-account-message aria-live="polite"></p></div></section>
-
-        <section class="settings-group settings-notifications" aria-labelledby="settings-notifications-title"><header><span>02</span><div><p>Notifications</p><h2 id="settings-notifications-title">Academy Updates</h2></div></header><div class="settings-group-body"><fieldset><legend>Notification topics</legend><label><span><strong>Training Schedule Changes</strong><small>Session time, venue and rescheduling updates</small></span><input type="checkbox" data-notification-key="schedule" checked><i aria-hidden="true"></i></label><label><span><strong>Coach Feedback</strong><small>New post-session coaching notes</small></span><input type="checkbox" data-notification-key="feedback" checked><i aria-hidden="true"></i></label><label><span><strong>Attendance Updates</strong><small>Recorded attendance and corrections</small></span><input type="checkbox" data-notification-key="attendance" checked><i aria-hidden="true"></i></label><label><span><strong>Tournament Announcements</strong><small>Competition details and registrations</small></span><input type="checkbox" data-notification-key="tournaments" checked><i aria-hidden="true"></i></label><label><span><strong>Selection Trial Deadlines</strong><small>Trial registration and deadline reminders</small></span><input type="checkbox" data-notification-key="trials" checked><i aria-hidden="true"></i></label><label><span><strong>Academy Notices</strong><small>Important operational academy information</small></span><input type="checkbox" data-notification-key="academy" checked><i aria-hidden="true"></i></label></fieldset><fieldset class="notification-channels"><legend>Delivery channels</legend><label><span><strong>Email</strong><small>Send enabled topics to your account email</small></span><input type="checkbox" data-notification-key="channel_email" checked><i aria-hidden="true"></i></label><label><span><strong>Portal Notification</strong><small>Show enabled topics in the dashboard header</small></span><input type="checkbox" data-notification-key="channel_portal" checked><i aria-hidden="true"></i></label></fieldset><p class="settings-save-state" data-notification-status aria-live="polite">Preferences are stored locally for this template preview.</p></div></section>
-
-        <section class="settings-group settings-appearance" aria-labelledby="settings-appearance-title"><header><span>03</span><div><p>Appearance</p><h2 id="settings-appearance-title">Display Preferences</h2></div></header><div class="settings-group-body"><fieldset><legend>Theme</legend><p>Choose how the portal surface responds to your device.</p><div class="settings-segmented" role="group" aria-label="Choose portal theme"><button type="button" data-theme-preference="light" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2"/></svg>Light</button><button type="button" data-theme-preference="dark" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.5A8.5 8.5 0 0 1 8.5 4 8.5 8.5 0 1 0 20 15.5Z"/></svg>Dark</button><button type="button" data-theme-preference="system" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 22h8m-4-4v4"/></svg>System</button></div></fieldset><fieldset><legend>Reading Direction</legend><p>Switch the complete dashboard layout direction.</p><div class="settings-segmented settings-direction-options" role="group" aria-label="Choose reading direction"><button type="button" data-direction-preference="ltr" aria-pressed="false">LTR <small>Left to right</small></button><button type="button" data-direction-preference="rtl" aria-pressed="false">RTL <small>Right to left</small></button></div></fieldset></div></section>
-
-        <section class="settings-group settings-parent-access" data-parent-context hidden aria-labelledby="parent-access-title"><header><span>04</span><div><p>Player Access</p><h2 id="parent-access-title">Currently Viewing</h2></div></header><div class="settings-group-body"><div class="settings-viewing-player"><img src="../assets/images/testimonial-rohan-kumar.webp" alt="" width="320" height="320"><div><strong>Arjun Rao</strong><span>U16 Performance Batch</span><small>This template currently demonstrates one linked player.</small></div></div></div></section>
-
-        <section class="settings-group settings-privacy" aria-labelledby="settings-privacy-title"><header><span>05</span><div><p>Privacy &amp; Session</p><h2 id="settings-privacy-title">Account Privacy</h2></div></header><div class="settings-group-body"><div class="settings-privacy-copy"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><p>Portal information is shown only for the current demo account. This static template does not provide device or session management.</p></div><a href="../pages/login.html">Sign out of this device <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 17l5-5-5-5m5 5H3M14 3h6a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-6"/></svg></a></div></section>
-      </div>
-    </main>
-  </div>
-</body>
+    </body>
 </html>
-

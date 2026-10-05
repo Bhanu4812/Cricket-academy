@@ -1,87 +1,586 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en" dir="ltr" data-theme="light">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Upcoming competitions, selection trials and registration deadlines.">
-  <title>Tournaments & Trials | Vertex Cricket Academy</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/dark-mode.css">
-  <link rel="stylesheet" href="../assets/css/rtl.css">
-  <script src="../assets/js/main.js" defer></script>
-  <script src="../assets/js/dashboard.js" defer></script>
-</head>
-<body class="dashboard-page">
-  <a class="skip-link" href="#dashboard-content">Skip to dashboard content</a>
-  <header class="dashboard-header">
-    <a class="brand dashboard-brand" href="../pages/Homepage1.html" aria-label="Vertex Cricket Academy home">
-      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 3.5 41 10v12.2c0 10.4-6.8 18.5-17 22.3C13.8 40.7 7 32.6 7 22.2V10L24 3.5Z"/><path class="brand-mark-detail" d="M17.2 31.8V17.6m4.5 14.2V17.6m4.6 14.2V17.6M15 17.6h13.5M14.5 31.8H29"/><circle class="brand-mark-ball" cx="32.6" cy="14.2" r="5.2"/><path class="brand-mark-seam" d="M29.5 10.7c1.8 1.5 3.9 3.8 6.1 7"/></svg></span>
-      <span class="brand-copy"><span class="brand-name">Vertex</span><span class="brand-descriptor">Student &amp; Parent Portal</span></span>
-    </a>
-    <div class="dashboard-header-actions">
-      <button class="dashboard-menu-toggle" type="button" aria-label="Open portal navigation" aria-expanded="false" aria-controls="dashboard-sidebar"><span></span><span></span><span></span></button>
-      <button class="icon-button theme-toggle dashboard-desktop-utility" type="button" aria-label="Switch to dark mode" title="Switch to dark mode"><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.4A8.5 8.5 0 0 1 8.6 3.8 8.6 8.6 0 1 0 20.2 15.4Z"/></svg><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
-      <button class="icon-button direction-toggle dashboard-desktop-utility" type="button" aria-label="Switch to RTL" title="Switch to RTL"><span data-direction-short>RTL</span></button>
-      <div class="dashboard-popover">
-        <button class="dashboard-notification-toggle" type="button" aria-label="Notifications, 3 unread" aria-expanded="false" aria-controls="dashboard-notifications"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9Z"/><path d="M10 21h4"/></svg><span>3</span></button>
-        <div class="dashboard-notifications" id="dashboard-notifications" hidden>
-          <header><span>Notifications</span><small>3 unread</small></header>
-          <ul><li><strong>Training Schedule Updated</strong><p>Thursday batting session moved to 5:30 PM.</p></li><li><strong>Coach Feedback Added</strong><p>New feedback is available from your latest session.</p></li><li><strong>Trial Registration Reminder</strong><p>U16 selection trial registration closes in 3 days.</p></li></ul>
-          <a href="dashboard.html">View All Notifications</a>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Upcoming competitions, selection trials and registration deadlines."
+        />
+        <title>Tournaments & Trials | Vertex Cricket Academy</title>
+        <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+        <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+        <link rel="stylesheet" href="../assets/css/rtl.css" />
+        <link rel="stylesheet" href="../assets/css/coaching.css" />
+        <script src="../assets/js/main.js" defer></script>
+        <script src="../assets/js/dashboard.js" defer></script>
+    </head>
+    <body class="dashboard-page">
+        <a class="skip-link" href="#dashboard-content">Skip to dashboard content</a>
+        <header class="dashboard-header">
+            <a
+                class="brand dashboard-brand"
+                href="../pages/Homepage1.html"
+                aria-label="Vertex Cricket Academy home"
+            >
+                <span class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                        <path
+                            d="M24 3.5 41 10v12.2c0 10.4-6.8 18.5-17 22.3C13.8 40.7 7 32.6 7 22.2V10L24 3.5Z"
+                        />
+                        <path
+                            class="brand-mark-detail"
+                            d="M17.2 31.8V17.6m4.5 14.2V17.6m4.6 14.2V17.6M15 17.6h13.5M14.5 31.8H29"
+                        />
+                        <circle class="brand-mark-ball" cx="32.6" cy="14.2" r="5.2" />
+                        <path class="brand-mark-seam" d="M29.5 10.7c1.8 1.5 3.9 3.8 6.1 7" />
+                    </svg>
+                </span>
+                <span class="brand-copy">
+                    <span class="brand-name">Vertex</span>
+                    <span class="brand-descriptor">Student &amp; Parent Portal</span>
+                </span>
+            </a>
+            <div class="dashboard-header-actions">
+                <button
+                    class="dashboard-menu-toggle"
+                    type="button"
+                    aria-label="Open portal navigation"
+                    aria-expanded="false"
+                    aria-controls="dashboard-sidebar"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <button
+                    class="icon-button theme-toggle dashboard-desktop-utility"
+                    type="button"
+                    aria-label="Switch to dark mode"
+                    title="Switch to dark mode"
+                >
+                    <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20.2 15.4A8.5 8.5 0 0 1 8.6 3.8 8.6 8.6 0 1 0 20.2 15.4Z" /></svg
+                    ><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="3.5" />
+                        <path
+                            d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+                        />
+                    </svg>
+                </button>
+                <button
+                    class="icon-button direction-toggle dashboard-desktop-utility"
+                    type="button"
+                    aria-label="Switch to RTL"
+                    title="Switch to RTL"
+                >
+                    <span data-direction-short>RTL</span>
+                </button>
+                <div class="dashboard-popover">
+                    <button
+                        class="dashboard-notification-toggle"
+                        type="button"
+                        aria-label="Notifications, 3 unread"
+                        aria-expanded="false"
+                        aria-controls="dashboard-notifications"
+                    >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9Z" />
+                            <path d="M10 21h4" />
+                        </svg>
+                        <span>3</span>
+                    </button>
+                    <div class="dashboard-notifications" id="dashboard-notifications" hidden>
+                        <header>
+                            <span>Notifications</span>
+                            <small>3 unread</small>
+                        </header>
+                        <ul>
+                            <li>
+                                <strong>Training Schedule Updated</strong>
+                                <p>Thursday batting session moved to 5:30 PM.</p>
+                            </li>
+                            <li>
+                                <strong>Coach Feedback Added</strong>
+                                <p>New feedback is available from your latest session.</p>
+                            </li>
+                            <li>
+                                <strong>Trial Registration Reminder</strong>
+                                <p>U16 selection trial registration closes in 3 days.</p>
+                            </li>
+                        </ul>
+                        <a href="dashboard.html">View All Notifications</a>
+                    </div>
+                </div>
+                <div class="dashboard-popover">
+                    <button
+                        class="dashboard-profile-toggle"
+                        type="button"
+                        aria-label="Open account menu for Arjun Rao"
+                        aria-expanded="false"
+                        aria-controls="dashboard-profile-menu"
+                    >
+                        <span class="dashboard-avatar" aria-hidden="true">
+                            <img
+                                src="../assets/images/testimonial-rohan-kumar.webp"
+                                data-student-src="../assets/images/testimonial-rohan-kumar.webp"
+                                data-parent-src="../assets/images/testimonial-sunita-mehra.webp"
+                                alt=""
+                                width="320"
+                                height="320"
+                            />
+                        </span>
+                        <span class="dashboard-profile-copy">
+                            <strong data-role-account-name>Arjun Rao</strong>
+                            <small data-role-pill>Student</small>
+                        </span>
+                        <svg viewBox="0 0 12 8" aria-hidden="true"><path d="m1 1.5 5 5 5-5" /></svg>
+                    </button>
+                    <div class="dashboard-profile-menu" id="dashboard-profile-menu" hidden>
+                        <span data-role-account-label>Player account</span>
+                        <strong data-role-menu-name>Arjun Rao</strong>
+                        <small data-role-menu-detail>Student View &middot; U16</small>
+                        <div class="dashboard-role-preview">
+                            <span>
+                                View as
+                                <small>Demo preview</small>
+                            </span>
+                            <div role="group" aria-label="Preview portal as student or parent">
+                                <button
+                                    type="button"
+                                    data-dashboard-role="student"
+                                    aria-pressed="true"
+                                >
+                                    Student
+                                </button>
+                                <button
+                                    type="button"
+                                    data-dashboard-role="parent"
+                                    aria-pressed="false"
+                                >
+                                    Parent
+                                </button>
+                            </div>
+                        </div>
+                        <div class="dashboard-viewing-player" data-parent-context hidden>
+                            <span>Viewing player</span>
+                            <strong>
+                                Arjun Rao
+                                <small>U16 Performance</small>
+                            </strong>
+                        </div>
+                        <nav aria-label="Account menu">
+                            <a href="profile.html" data-role-profile-link>My Profile</a>
+                            <a href="settings.html">Account Settings</a>
+                            <a href="../pages/Homepage1.html">Back to Website</a>
+                            <a href="../pages/login.html">Logout</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="dashboard-shell">
+            <div class="dashboard-sidebar-overlay" data-dashboard-overlay></div>
+            <aside
+                class="dashboard-sidebar"
+                id="dashboard-sidebar"
+                aria-hidden="false"
+                aria-label="Student and parent portal navigation"
+            >
+                <div class="dashboard-sidebar-head">
+                    <span>
+                        <strong>Player Performance Portal</strong>
+                        <small>Student &amp; Parent Access</small>
+                    </span>
+                    <button
+                        class="dashboard-sidebar-close"
+                        type="button"
+                        aria-label="Close portal navigation"
+                    >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="m5 5 14 14M19 5 5 19" />
+                        </svg>
+                    </button>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="schedule.html">Schedule</a></li>
+                        <li><a href="attendance.html">Attendance</a></li>
+                        <li><a href="feedback.html">Coach Feedback</a></li>
+                        <li>
+                            <a href="tournaments.html" class="is-active" aria-current="page">
+                                Tournaments & Trials
+                            </a>
+                        </li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="settings.html">Settings</a></li>
+                        <li><a href="../pages/login.html">Logout</a></li>
+                    </ul>
+                </nav>
+                <section class="dashboard-next-session" aria-labelledby="next-session-title">
+                    <span>Next Session</span>
+                    <h2 id="next-session-title">Batting Development</h2>
+                    <p>Thursday &middot; 5:30 PM</p>
+                    <dl>
+                        <dt>Coach</dt>
+                        <dd>R. Sharma</dd>
+                    </dl>
+                    <a href="schedule.html">View Schedule</a>
+                </section>
+            </aside>
+            <main class="dashboard-content" id="dashboard-content" tabindex="-1">
+                <header class="dashboard-page-intro portal-competition-intro">
+                    <span>Competition</span>
+                    <h1
+                        data-student-text="Upcoming Tournaments &amp; Selection Trials."
+                        data-parent-text="Arjun’s Upcoming Tournaments &amp; Selection Trials."
+                    >
+                        Upcoming Tournaments &amp; Selection Trials.
+                    </h1>
+                    <p>
+                        Track competition dates, eligibility, registration status and important
+                        selection deadlines.
+                    </p>
+                </header>
+                <div class="portal-competition-workspace">
+                    <section class="next-competition" aria-labelledby="next-competition-title">
+                        <header>
+                            <span>Next Competition</span>
+                            <strong>Registration Open</strong>
+                        </header>
+                        <div class="next-competition-main">
+                            <div class="competition-date-block">
+                                <span>October</span>
+                                <strong>18</strong>
+                                <small>2026</small>
+                            </div>
+                            <div class="competition-title-block">
+                                <span>U16 &middot; T20</span>
+                                <h2 id="next-competition-title">Academy Championship</h2>
+                                <p>Academy Main Ground</p>
+                            </div>
+                            <dl>
+                                <div>
+                                    <dt>Format</dt>
+                                    <dd>T20</dd>
+                                </div>
+                                <div>
+                                    <dt>Eligibility</dt>
+                                    <dd>U16 Performance Batch</dd>
+                                </div>
+                                <div>
+                                    <dt>Registration Deadline</dt>
+                                    <dd>30 September 2026</dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <footer>
+                            <div>
+                                <span>Player eligibility confirmed</span>
+                                <p>
+                                    Arjun’s current batch is eligible to express interest in this
+                                    competition.
+                                </p>
+                            </div>
+                            <button type="button" data-register-interest>
+                                Register Interest
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="m9 18 6-6-6-6" />
+                                </svg>
+                            </button>
+                        </footer>
+                        <p
+                            class="competition-demo-message"
+                            data-register-message
+                            aria-live="polite"
+                        ></p>
+                    </section>
+
+                    <section
+                        class="competition-deadline"
+                        id="trial-details"
+                        aria-labelledby="deadline-title"
+                    >
+                        <div class="deadline-count">
+                            <strong>12</strong>
+                            <span>Days Left</span>
+                        </div>
+                        <div class="deadline-main">
+                            <span>Selection Deadline</span>
+                            <h2 id="deadline-title">U16 Selection Trial</h2>
+                            <dl>
+                                <div>
+                                    <dt>Registration closes</dt>
+                                    <dd>15 September</dd>
+                                </div>
+                                <div>
+                                    <dt>Trial</dt>
+                                    <dd>
+                                        20 September
+                                        <span aria-hidden="true">&middot;</span>
+                                        8:00 AM
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <a href="#important-competition-dates">
+                            View Trial Details
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m9 18 6-6-6-6" />
+                            </svg>
+                        </a>
+                    </section>
+
+                    <section class="competition-eligibility" aria-labelledby="eligibility-title">
+                        <header>
+                            <span>Player Eligibility</span>
+                            <h2 id="eligibility-title">Competition Readiness</h2>
+                        </header>
+                        <div>
+                            <dl>
+                                <div>
+                                    <dt>Current Batch</dt>
+                                    <dd>U16 Performance</dd>
+                                </div>
+                                <div>
+                                    <dt>Eligible Competitions</dt>
+                                    <dd>3</dd>
+                                </div>
+                                <div>
+                                    <dt>Registered</dt>
+                                    <dd>1</dd>
+                                </div>
+                                <div>
+                                    <dt>Awaiting Selection</dt>
+                                    <dd>1</dd>
+                                </div>
+                            </dl>
+                            <p>
+                                Eligibility is based on the current demo batch and may be updated by
+                                academy staff.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section
+                        class="selection-status-panel"
+                        aria-labelledby="selection-status-title"
+                    >
+                        <header>
+                            <span>Selection Status</span>
+                            <h2 id="selection-status-title">U16 Competitive Squad</h2>
+                            <strong>
+                                <svg viewBox="0 0 18 18" aria-hidden="true">
+                                    <path d="m4 9 3 3 7-7" />
+                                </svg>
+                                Trial Registered
+                            </strong>
+                        </header>
+                        <div>
+                            <dl>
+                                <div>
+                                    <dt>Current Status</dt>
+                                    <dd>Trial Registered</dd>
+                                </div>
+                                <div>
+                                    <dt>Next Step</dt>
+                                    <dd>Attend selection trial on 20 September.</dd>
+                                </div>
+                            </dl>
+                            <div class="selection-state-key" aria-label="Possible selection states">
+                                <span>Eligible</span>
+                                <span>Registration Open</span>
+                                <span class="is-current">Registered</span>
+                                <span>Trial Completed</span>
+                                <span>Selected</span>
+                                <span>Not Selected</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="upcoming-competitions" aria-labelledby="upcoming-events-title">
+                        <header>
+                            <div>
+                                <span>Competition Roster</span>
+                                <h2 id="upcoming-events-title">Upcoming Events</h2>
+                            </div>
+                            <p>
+                                Competition details remain editable demo content until confirmed by
+                                the academy.
+                            </p>
+                        </header>
+                        <ol>
+                            <li>
+                                <time datetime="2026-09-12">
+                                    <strong>12</strong>
+                                    <span>Sep</span>
+                                </time>
+                                <div>
+                                    <span>Match Fixture</span>
+                                    <h3>Academy League Match</h3>
+                                </div>
+                                <dl>
+                                    <div>
+                                        <dt>Venue</dt>
+                                        <dd>Academy Main Ground</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Player Status</dt>
+                                        <dd>Squad Confirmed</dd>
+                                    </div>
+                                </dl>
+                                <span class="competition-row-status is-confirmed">
+                                    <i></i>
+                                    Confirmed
+                                </span>
+                            </li>
+                            <li>
+                                <time datetime="2026-09-20">
+                                    <strong>20</strong>
+                                    <span>Sep</span>
+                                </time>
+                                <div>
+                                    <span>Selection Trial</span>
+                                    <h3>U16 Selection Trial</h3>
+                                </div>
+                                <dl>
+                                    <div>
+                                        <dt>Registration closes</dt>
+                                        <dd>15 September</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Start Time</dt>
+                                        <dd>8:00 AM</dd>
+                                    </div>
+                                </dl>
+                                <span class="competition-row-status is-open">
+                                    <i></i>
+                                    Registration Open
+                                </span>
+                            </li>
+                            <li>
+                                <time datetime="2026-10-05">
+                                    <strong>05</strong>
+                                    <span>Oct</span>
+                                </time>
+                                <div>
+                                    <span>Invitational</span>
+                                    <h3>Inter-Academy Challenge</h3>
+                                </div>
+                                <dl>
+                                    <div>
+                                        <dt>Venue</dt>
+                                        <dd>Regional Cricket Centre</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Format</dt>
+                                        <dd>40 Overs</dd>
+                                    </div>
+                                </dl>
+                                <span class="competition-row-status is-selection">
+                                    <i></i>
+                                    Selected Players
+                                </span>
+                            </li>
+                            <li>
+                                <time datetime="2026-10-18">
+                                    <strong>18</strong>
+                                    <span>Oct</span>
+                                </time>
+                                <div>
+                                    <span>Tournament</span>
+                                    <h3>Academy Championship</h3>
+                                </div>
+                                <dl>
+                                    <div>
+                                        <dt>Deadline</dt>
+                                        <dd>30 September</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Format</dt>
+                                        <dd>T20</dd>
+                                    </div>
+                                </dl>
+                                <span class="competition-row-status is-open">
+                                    <i></i>
+                                    Registration Open
+                                </span>
+                            </li>
+                        </ol>
+                    </section>
+
+                    <section
+                        class="important-competition-dates"
+                        id="important-competition-dates"
+                        aria-labelledby="important-dates-title"
+                    >
+                        <header>
+                            <span>Competition Calendar</span>
+                            <h2 id="important-dates-title">Important Dates</h2>
+                        </header>
+                        <ol>
+                            <li>
+                                <time datetime="2026-09-12">
+                                    <strong>12</strong>
+                                    <span>Sep</span>
+                                </time>
+                                <div>
+                                    <span>Match</span>
+                                    <strong>Academy League Match</strong>
+                                    <small>Academy Main Ground</small>
+                                </div>
+                            </li>
+                            <li>
+                                <time datetime="2026-09-15">
+                                    <strong>15</strong>
+                                    <span>Sep</span>
+                                </time>
+                                <div>
+                                    <span>Deadline</span>
+                                    <strong>U16 Trial Registration</strong>
+                                    <small>Registration closes</small>
+                                </div>
+                            </li>
+                            <li>
+                                <time datetime="2026-09-20">
+                                    <strong>20</strong>
+                                    <span>Sep</span>
+                                </time>
+                                <div>
+                                    <span>Trial</span>
+                                    <strong>U16 Selection Trial</strong>
+                                    <small>8:00 AM</small>
+                                </div>
+                            </li>
+                            <li>
+                                <time datetime="2026-09-30">
+                                    <strong>30</strong>
+                                    <span>Sep</span>
+                                </time>
+                                <div>
+                                    <span>Deadline</span>
+                                    <strong>Championship Registration</strong>
+                                    <small>Interest deadline</small>
+                                </div>
+                            </li>
+                            <li>
+                                <time datetime="2026-10-18">
+                                    <strong>18</strong>
+                                    <span>Oct</span>
+                                </time>
+                                <div>
+                                    <span>Tournament</span>
+                                    <strong>U16 Academy Championship</strong>
+                                    <small>T20 competition day</small>
+                                </div>
+                            </li>
+                        </ol>
+                    </section>
+                </div>
+            </main>
         </div>
-      </div>
-      <div class="dashboard-popover">
-        <button class="dashboard-profile-toggle" type="button" aria-label="Open account menu for Arjun Rao" aria-expanded="false" aria-controls="dashboard-profile-menu"><span class="dashboard-avatar" aria-hidden="true"><img src="../assets/images/testimonial-rohan-kumar.webp" data-student-src="../assets/images/testimonial-rohan-kumar.webp" data-parent-src="../assets/images/testimonial-sunita-mehra.webp" alt="" width="320" height="320"></span><span class="dashboard-profile-copy"><strong data-role-account-name>Arjun Rao</strong><small data-role-pill>Student</small></span><svg viewBox="0 0 12 8" aria-hidden="true"><path d="m1 1.5 5 5 5-5"/></svg></button>
-        <div class="dashboard-profile-menu" id="dashboard-profile-menu" hidden>
-          <span data-role-account-label>Player account</span><strong data-role-menu-name>Arjun Rao</strong><small data-role-menu-detail>Student View &middot; U16</small>
-          <div class="dashboard-role-preview"><span>View as <small>Demo preview</small></span><div role="group" aria-label="Preview portal as student or parent"><button type="button" data-dashboard-role="student" aria-pressed="true">Student</button><button type="button" data-dashboard-role="parent" aria-pressed="false">Parent</button></div></div>
-          <div class="dashboard-viewing-player" data-parent-context hidden><span>Viewing player</span><strong>Arjun Rao <small>U16 Performance</small></strong></div>
-          <nav aria-label="Account menu"><a href="profile.html" data-role-profile-link>My Profile</a><a href="settings.html">Account Settings</a><a href="../pages/Homepage1.html">Back to Website</a><a href="../pages/login.html">Logout</a></nav>
-        </div>
-      </div>
-    </div>
-  </header>
-  <div class="dashboard-shell">
-    <div class="dashboard-sidebar-overlay" data-dashboard-overlay></div>
-    <aside class="dashboard-sidebar" id="dashboard-sidebar" aria-hidden="false" aria-label="Student and parent portal navigation">
-      <div class="dashboard-sidebar-head"><span><strong>Player Performance Portal</strong><small>Student &amp; Parent Access</small></span><button class="dashboard-sidebar-close" type="button" aria-label="Close portal navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg></button></div>
-      <nav>
-        <ul>
-          <li><a href="dashboard.html">Dashboard</a></li>
-          <li><a href="schedule.html">Schedule</a></li>
-          <li><a href="attendance.html">Attendance</a></li>
-          <li><a href="feedback.html">Coach Feedback</a></li>
-          <li><a href="tournaments.html" class="is-active" aria-current="page">Tournaments & Trials</a></li>
-          <li><a href="profile.html">Profile</a></li>
-          <li><a href="settings.html">Settings</a></li>
-          <li><a href="../pages/login.html">Logout</a></li>
-        </ul>
-      </nav>
-      <section class="dashboard-next-session" aria-labelledby="next-session-title">
-        <span>Next Session</span><h2 id="next-session-title">Batting Development</h2><p>Thursday &middot; 5:30 PM</p><dl><dt>Coach</dt><dd>R. Sharma</dd></dl><a href="schedule.html">View Schedule</a>
-      </section>
-    </aside>
-    <main class="dashboard-content" id="dashboard-content" tabindex="-1">
-      <header class="dashboard-page-intro portal-competition-intro">
-        <span>Competition</span>
-        <h1 data-student-text="Upcoming Tournaments &amp; Selection Trials." data-parent-text="Arjun’s Upcoming Tournaments &amp; Selection Trials.">Upcoming Tournaments &amp; Selection Trials.</h1>
-        <p>Track competition dates, eligibility, registration status and important selection deadlines.</p>
-      </header>
-      <div class="portal-competition-workspace">
-        <section class="next-competition" aria-labelledby="next-competition-title"><header><span>Next Competition</span><strong>Registration Open</strong></header><div class="next-competition-main"><div class="competition-date-block"><span>October</span><strong>18</strong><small>2026</small></div><div class="competition-title-block"><span>U16 &middot; T20</span><h2 id="next-competition-title">Academy Championship</h2><p>Academy Main Ground</p></div><dl><div><dt>Format</dt><dd>T20</dd></div><div><dt>Eligibility</dt><dd>U16 Performance Batch</dd></div><div><dt>Registration Deadline</dt><dd>30 September 2026</dd></div></dl></div><footer><div><span>Player eligibility confirmed</span><p>Arjun’s current batch is eligible to express interest in this competition.</p></div><button type="button" data-register-interest>Register Interest <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button></footer><p class="competition-demo-message" data-register-message aria-live="polite"></p></section>
-
-        <section class="competition-deadline" id="trial-details" aria-labelledby="deadline-title"><div class="deadline-count"><strong>12</strong><span>Days Left</span></div><div class="deadline-main"><span>Selection Deadline</span><h2 id="deadline-title">U16 Selection Trial</h2><dl><div><dt>Registration closes</dt><dd>15 September</dd></div><div><dt>Trial</dt><dd>20 September <span aria-hidden="true">&middot;</span> 8:00 AM</dd></div></dl></div><a href="#important-competition-dates">View Trial Details <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a></section>
-
-        <section class="competition-eligibility" aria-labelledby="eligibility-title"><header><span>Player Eligibility</span><h2 id="eligibility-title">Competition Readiness</h2></header><div><dl><div><dt>Current Batch</dt><dd>U16 Performance</dd></div><div><dt>Eligible Competitions</dt><dd>3</dd></div><div><dt>Registered</dt><dd>1</dd></div><div><dt>Awaiting Selection</dt><dd>1</dd></div></dl><p>Eligibility is based on the current demo batch and may be updated by academy staff.</p></div></section>
-
-        <section class="selection-status-panel" aria-labelledby="selection-status-title"><header><span>Selection Status</span><h2 id="selection-status-title">U16 Competitive Squad</h2><strong><svg viewBox="0 0 18 18" aria-hidden="true"><path d="m4 9 3 3 7-7"/></svg>Trial Registered</strong></header><div><dl><div><dt>Current Status</dt><dd>Trial Registered</dd></div><div><dt>Next Step</dt><dd>Attend selection trial on 20 September.</dd></div></dl><div class="selection-state-key" aria-label="Possible selection states"><span>Eligible</span><span>Registration Open</span><span class="is-current">Registered</span><span>Trial Completed</span><span>Selected</span><span>Not Selected</span></div></div></section>
-
-        <section class="upcoming-competitions" aria-labelledby="upcoming-events-title"><header><div><span>Competition Roster</span><h2 id="upcoming-events-title">Upcoming Events</h2></div><p>Competition details remain editable demo content until confirmed by the academy.</p></header><ol><li><time datetime="2026-09-12"><strong>12</strong><span>Sep</span></time><div><span>Match Fixture</span><h3>Academy League Match</h3></div><dl><div><dt>Venue</dt><dd>Academy Main Ground</dd></div><div><dt>Player Status</dt><dd>Squad Confirmed</dd></div></dl><span class="competition-row-status is-confirmed"><i></i>Confirmed</span></li><li><time datetime="2026-09-20"><strong>20</strong><span>Sep</span></time><div><span>Selection Trial</span><h3>U16 Selection Trial</h3></div><dl><div><dt>Registration closes</dt><dd>15 September</dd></div><div><dt>Start Time</dt><dd>8:00 AM</dd></div></dl><span class="competition-row-status is-open"><i></i>Registration Open</span></li><li><time datetime="2026-10-05"><strong>05</strong><span>Oct</span></time><div><span>Invitational</span><h3>Inter-Academy Challenge</h3></div><dl><div><dt>Venue</dt><dd>Regional Cricket Centre</dd></div><div><dt>Format</dt><dd>40 Overs</dd></div></dl><span class="competition-row-status is-selection"><i></i>Selected Players</span></li><li><time datetime="2026-10-18"><strong>18</strong><span>Oct</span></time><div><span>Tournament</span><h3>Academy Championship</h3></div><dl><div><dt>Deadline</dt><dd>30 September</dd></div><div><dt>Format</dt><dd>T20</dd></div></dl><span class="competition-row-status is-open"><i></i>Registration Open</span></li></ol></section>
-
-        <section class="important-competition-dates" id="important-competition-dates" aria-labelledby="important-dates-title"><header><span>Competition Calendar</span><h2 id="important-dates-title">Important Dates</h2></header><ol><li><time datetime="2026-09-12"><strong>12</strong><span>Sep</span></time><div><span>Match</span><strong>Academy League Match</strong><small>Academy Main Ground</small></div></li><li><time datetime="2026-09-15"><strong>15</strong><span>Sep</span></time><div><span>Deadline</span><strong>U16 Trial Registration</strong><small>Registration closes</small></div></li><li><time datetime="2026-09-20"><strong>20</strong><span>Sep</span></time><div><span>Trial</span><strong>U16 Selection Trial</strong><small>8:00 AM</small></div></li><li><time datetime="2026-09-30"><strong>30</strong><span>Sep</span></time><div><span>Deadline</span><strong>Championship Registration</strong><small>Interest deadline</small></div></li><li><time datetime="2026-10-18"><strong>18</strong><span>Oct</span></time><div><span>Tournament</span><strong>U16 Academy Championship</strong><small>T20 competition day</small></div></li></ol></section>
-      </div>
-    </main>
-  </div>
-</body>
+    </body>
 </html>
-
